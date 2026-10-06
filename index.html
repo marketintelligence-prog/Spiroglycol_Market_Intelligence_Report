@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spiroglycol (SPG) — Market Intelligence &amp; Feasibility Report</title>
+<style>
+  :root{
+    --navy:#0d1b2a; --navy2:#13263b; --accent:#4fc3f7; --blue:#1565c0; --blue-d:#0d47a1;
+    --bg:#f0f2f5; --card:#ffffff; --ink:#1a1a2e; --muted:#546e7a; --line:#e3e8ef;
+    --india:#fff8e1; --india-b:#f9a825;
+    --green:#1b5e20; --red:#b71c1c; --amber:#e65100;
+  }
+  html{scroll-behavior:smooth;}
+  *{box-sizing:border-box;}
+  body{margin:0;padding:0;display:flex;min-height:100vh;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--ink);background:var(--bg);font-size:14px;line-height:1.55;}
+  a{color:var(--blue);}
+  /* ---------- SIDEBAR ---------- */
+  .sidebar{width:260px;min-width:260px;position:fixed;top:0;left:0;height:100vh;overflow-y:auto;background:#0d1b2a;z-index:100;display:flex;flex-direction:column;color:#cfd8dc;}
+  .brand{padding:18px 16px 12px;border-bottom:1px solid rgba(255,255,255,.08);}
+  .brand-label{font-size:10px;letter-spacing:1.6px;color:var(--accent);font-weight:700;text-transform:uppercase;}
+  .brand-title{font-size:15px;color:#fff;font-weight:700;margin-top:4px;line-height:1.3;}
+  .meta{padding:12px 16px 4px;font-size:11.5px;}
+  .meta-row{display:flex;justify-content:space-between;gap:8px;padding:4px 0;border-bottom:1px dashed rgba(255,255,255,.07);}
+  .meta-row span:first-child{color:#90a4ae;}
+  .meta-row span:last-child{color:#eceff1;font-weight:600;text-align:right;}
+  .badges{padding:8px 16px 0;display:flex;flex-wrap:wrap;gap:6px;}
+  .sidebar-badge{display:inline-block;padding:4px 10px;border-radius:12px;font-size:10px;font-weight:600;}
+  .badge-approved{background:#1b5e20;color:#a5d6a7;border:1px solid #388e3c;}
+  .badge-regulated{background:#1a237e;color:#90caf9;border:1px solid #3949ab;}
+  .badge-warning{background:#e65100;color:#ffe0b2;border:1px solid #ef6c00;}
+  .badge-mode{background:#01579b;color:#b3e5fc;border:1px solid #0288d1;}
+  .confidential-notice{margin:12px 10px 16px 10px;padding:10px 12px;background:rgba(255,193,7,0.12);border:1px solid rgba(255,193,7,0.35);border-radius:6px;}
+  .conf-title{color:#ffc107;font-size:10px;font-weight:700;letter-spacing:0.5px;margin-bottom:5px;}
+  .conf-text{color:#b0bec5;font-size:9.5px;line-height:1.45;}
+  .nav{padding:0 8px 12px;flex:1;}
+  .nav-group{font-size:9.5px;letter-spacing:1.4px;text-transform:uppercase;color:#78909c;font-weight:700;margin:12px 8px 4px;}
+  .nav-link{display:flex;align-items:center;gap:8px;padding:7px 10px;border-radius:6px;color:#b0bec5;text-decoration:none;font-size:12.5px;border-left:3px solid transparent;transition:background .15s,color .15s;}
+  .nav-link:hover{background:rgba(79,195,247,.08);color:#fff;}
+  .nav-link.active{background:rgba(79,195,247,.14);color:#4fc3f7;border-left-color:#4fc3f7;font-weight:600;}
+  .nav-num{display:inline-block;min-width:22px;font-size:10.5px;font-weight:700;color:#4fc3f7;opacity:.85;}
+  .pdf-wrap{position:sticky;bottom:0;background:#0d1b2a;padding:12px 14px 16px;border-top:1px solid rgba(255,255,255,.08);margin-top:auto;}
+  .pdf-btn{width:100%;padding:11px 12px;border:0;border-radius:8px;background:linear-gradient(135deg,#1565c0,#0288d1);color:#fff;font-weight:700;font-size:13px;cursor:pointer;letter-spacing:.3px;}
+  .pdf-btn:hover{filter:brightness(1.1);}
+  .pdf-hint{font-size:9.5px;color:#78909c;margin-top:6px;text-align:center;}
+  /* ---------- MAIN ---------- */
+  .main-content{margin-left:260px;width:calc(100% - 260px);min-height:100vh;background:#f0f2f5;}
+  .hero{background:linear-gradient(135deg,#0d1b2a 0%,#13263b 45%,#0d47a1 100%);color:#fff;padding:34px 40px 30px;}
+  .report-type{display:inline-block;background:rgba(255,193,7,.16);border:1px solid rgba(255,193,7,.5);color:#ffe082;padding:5px 12px;border-radius:14px;font-size:11.5px;font-weight:700;letter-spacing:.3px;}
+  .hero h1{font-size:34px;margin:14px 0 4px;letter-spacing:-.5px;}
+  .hero .sub{color:#b3e5fc;font-size:14px;max-width:1100px;}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 4px;}
+  .chip{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);padding:4px 11px;border-radius:14px;font-size:11.5px;color:#e1f5fe;}
+  .prepared{font-size:12px;color:#90caf9;margin-top:8px;}
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:12px;margin-top:22px;}
+  .kpi{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:13px 14px;}
+  .kpi-label{font-size:10.5px;text-transform:uppercase;letter-spacing:1px;color:#90caf9;font-weight:700;}
+  .kpi-value{font-size:19px;white-space:nowrap;font-weight:800;margin:4px 0 2px;color:#fff;}
+  .kpi-sub{font-size:11px;color:#b0bec5;}
+  .kpi-sub a{color:#81d4fa;}
+  .content{padding:26px 40px 10px;}
+  .report-section{margin-bottom:30px;scroll-margin-top:16px;}
+  .sec-head{display:flex;align-items:center;gap:12px;margin:0 0 14px;}
+  .sec-num{width:38px;height:38px;border-radius:9px;background:#1565c0;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;flex-shrink:0;}
+  .sec-head h2{margin:0;font-size:21px;color:var(--navy);}
+  .card{background:#fff;border-radius:10px;box-shadow:0 1px 4px rgba(0,0,0,0.05);padding:18px 20px;margin-bottom:14px;border:1px solid #e8ecf1;}
+  .card h3{margin:0 0 10px;font-size:15.5px;color:var(--blue-d);}
+  .card h4{margin:14px 0 8px;font-size:13.5px;color:var(--navy);}
+  .card p{margin:6px 0 10px;}
+  .src{font-size:10.5px;font-weight:700;text-decoration:none;color:#1565c0;white-space:nowrap;}
+  .src:hover{text-decoration:underline;}
+  .muted{color:var(--muted);}
+  .small{font-size:12px;}
+  .tbl-wrap{overflow-x:auto;margin:8px 0 6px;}
+  table.tbl{width:100%;border-collapse:collapse;font-size:12.5px;}
+  table.tbl th{background:#1565c0;color:#fff;text-align:left;padding:8px 10px;font-weight:700;font-size:12px;white-space:nowrap;}
+  table.tbl td{padding:7px 10px;border-bottom:1px solid #e6ebf1;vertical-align:top;}
+  table.tbl tbody tr:nth-child(even) td{background:#f7f9fc;}
+  table.tbl tbody tr:hover td{background:#e3f2fd;}
+  table.tbl tr.india td{background:#fff8e1 !important;}
+  table.tbl tr.india td:first-child{border-left:3px solid #f9a825;}
+  table.tbl tr.india:hover td{background:#ffecb3 !important;}
+  table.tbl td.k{font-weight:600;color:var(--navy);width:24%;}
+  .mono{font-family:Consolas,"SFMono-Regular",Menlo,monospace;font-size:11.5px;word-break:break-all;}
+  .tag{display:inline-block;padding:2px 9px;border-radius:10px;font-size:10.5px;font-weight:700;white-space:nowrap;}
+  .t-green{background:#e8f5e9;color:#1b5e20;border:1px solid #a5d6a7;}
+  .t-amber{background:#fff3e0;color:#e65100;border:1px solid #ffcc80;}
+  .t-red{background:#ffebee;color:#b71c1c;border:1px solid #ef9a9a;}
+  .t-blue{background:#e3f2fd;color:#0d47a1;border:1px solid #90caf9;}
+  .t-grey{background:#eceff1;color:#455a64;border:1px solid #cfd8dc;}
+  .t-purple{background:#f3e5f5;color:#6a1b9a;border:1px solid #ce93d8;}
+  .prop-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px;margin:8px 0;}
+  .prop{background:#f7f9fc;border:1px solid #e3e8ef;border-radius:8px;padding:11px 13px;}
+  .prop .pl{font-size:10.5px;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);font-weight:700;}
+  .prop .pv{font-size:14px;font-weight:700;color:var(--navy);margin-top:3px;}
+  .prop .pd{font-size:11.5px;color:#455a64;margin-top:3px;}
+  .alert{border-radius:8px;padding:11px 14px;margin:10px 0;font-size:13px;border-left:4px solid;}
+  .alert b{display:block;margin-bottom:2px;}
+  .a-info{background:#e3f2fd;border-color:#1565c0;color:#0d3c6e;}
+  .a-warn{background:#fff8e1;border-color:#f9a825;color:#5d4300;}
+  .a-success{background:#e8f5e9;border-color:#2e7d32;color:#1b4d20;}
+  .a-danger{background:#ffebee;border-color:#c62828;color:#6d1414;}
+  .exec{display:grid;grid-template-columns:1.25fr 1fr;gap:16px;}
+  .verdict{border-radius:10px;padding:16px 18px;color:#fff;}
+  .v-cond{background:linear-gradient(135deg,#e65100,#ef6c00);}
+  .verdict .vt{font-size:11px;letter-spacing:1.4px;font-weight:800;opacity:.9;}
+  .verdict .vv{font-size:24px;font-weight:900;margin:3px 0 6px;}
+  .verdict p{margin:4px 0;font-size:13px;color:#fff3e0;}
+  ul.tight{margin:6px 0 6px 18px;padding:0;}
+  ul.tight li{margin:3px 0;}
+  /* SWOT */
+  .swot{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  .sq{border-radius:10px;padding:14px 16px;color:#fff;}
+  .sq h4{margin:0 0 6px;color:#fff;font-size:14px;letter-spacing:.5px;}
+  .sq ul{margin:0 0 0 18px;padding:0;font-size:12.5px;}
+  .sq li{margin:4px 0;}
+  .s-s{background:#1b5e20;} .s-w{background:#b71c1c;} .s-o{background:#1565c0;} .s-t{background:#e65100;}
+  /* Porter */
+  .porter{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+  .pf{background:#fff;border:1px solid #e3e8ef;border-radius:10px;padding:13px 14px;border-top:5px solid;}
+  .pf h4{margin:0 0 4px;font-size:13.5px;color:var(--navy);}
+  .pf p{font-size:12.3px;margin:6px 0 0;}
+  .pf-h{border-top-color:#c62828;} .pf-m{border-top-color:#ef6c00;} .pf-l{border-top-color:#2e7d32;} .pf-o{border-top-color:#1565c0;}
+  /* BCG */
+  .bcg{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+  .bq{border-radius:10px;padding:13px 15px;min-height:112px;}
+  .bq h4{margin:0 0 4px;font-size:13.5px;}
+  .bq p{margin:3px 0;font-size:12.3px;}
+  .b-star{background:#fffde7;border:2px solid #fbc02d;} .b-q{background:#e3f2fd;border:2px solid #1e88e5;}
+  .b-cow{background:#e8f5e9;border:2px solid #43a047;} .b-dog{background:#fbe9e7;border:2px solid #e64a19;}
+  .bcg-axis{font-size:11px;color:var(--muted);text-align:center;margin-top:6px;}
+  /* Value chain */
+  .vchain{display:flex;flex-wrap:wrap;gap:6px;align-items:stretch;margin:6px 0 12px;}
+  .vstep{flex:1 1 120px;border-radius:9px;padding:11px 10px;text-align:center;font-size:12px;font-weight:700;position:relative;}
+  .v-on{background:#1565c0;color:#fff;box-shadow:0 2px 6px rgba(21,101,192,.3);}
+  .v-part{background:#e3f2fd;color:#0d47a1;border:2px dashed #1565c0;}
+  .v-off{background:#eceff1;color:#78909c;border:1px solid #cfd8dc;}
+  .vstep small{display:block;font-weight:500;font-size:10.5px;margin-top:3px;opacity:.9;}
+  .varrow{display:flex;align-items:center;color:#90a4ae;font-weight:800;}
+  /* steps */
+  ol.steps{list-style:none;counter-reset:st;margin:6px 0;padding:0;}
+  ol.steps li{counter-increment:st;position:relative;padding:4px 0 14px 54px;min-height:44px;}
+  ol.steps li::before{content:counter(st);position:absolute;left:0;top:0;width:38px;height:38px;border-radius:50%;background:#1565c0;color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:15px;}
+  ol.steps li b{color:var(--navy);}
+  .when{display:inline-block;background:#e3f2fd;color:#0d47a1;border-radius:10px;font-size:10.5px;font-weight:700;padding:2px 8px;margin-left:6px;}
+  /* refs */
+  ol.refs{list-style:none;counter-reset:ref;margin:0;padding:0;columns:2;column-gap:28px;}
+  ol.refs li{counter-increment:ref;position:relative;padding:3px 0 7px 34px;font-size:12px;break-inside:avoid;}
+  ol.refs li::before{content:"[" counter(ref) "]";position:absolute;left:0;top:3px;font-weight:800;color:#1565c0;font-size:11.5px;}
+  ol.refs a{word-break:break-all;font-size:11px;}
+  .print-toc{display:none;}
+  footer{background:#0d1b2a;color:#b0bec5;padding:22px 40px;font-size:12px;margin-top:10px;}
+  footer b{color:#ffc107;}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  @media (max-width:1100px){ .exec,.two{grid-template-columns:1fr;} .porter{grid-template-columns:1fr 1fr;} ol.refs{columns:1;} }
+  @media (max-width:820px){
+    body{display:block;}
+    .sidebar{position:relative;width:100%;min-width:0;height:auto;}
+    .main-content{margin-left:0;width:100%;}
+    .hero,.content,footer{padding-left:16px;padding-right:16px;}
+    .swot,.bcg,.porter{grid-template-columns:1fr;}
+    .hero h1{font-size:26px;}
+  }
+  /* ---------- PRINT ---------- */
+  @media print{
+    *{-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important;}
+    @page{size:A4;margin:10mm;}
+    body{display:block;background:#fff;font-size:11px;}
+    .sidebar{display:none !important;}
+    .main-content{margin-left:0 !important;width:100% !important;}
+    .print-toc{display:block;}
+    .hero,.content,footer{padding-left:8px;padding-right:8px;}
+    .card,.sq,.pf,.bq,.verdict,tr{break-inside:avoid;}
+    .report-section{break-before:auto;}
+    table.tbl{font-size:10px;}
+    .tbl-wrap{overflow:visible;}
+    ol.refs{columns:1;}
+    .exec,.two{grid-template-columns:1fr;}
+    .exec .card{break-inside:auto;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ======================= SIDEBAR ======================= -->
+<aside class="sidebar" aria-label="Report navigation">
+  <div class="brand">
+    <div class="brand-label">Market Intelligence</div>
+    <div class="brand-title">Spiroglycol (SPG)<br><span style="font-weight:500;font-size:12px;color:#90a4ae">Market Intelligence &amp; Feasibility Report</span></div>
+  </div>
+  <div class="meta">
+    <div class="meta-row"><span>Product</span><span>Spiroglycol</span></div>
+    <div class="meta-row"><span>CAS No.</span><span>1455-42-1</span></div>
+    <div class="meta-row"><span>HS (WCO)</span><span>2932.99</span></div>
+    <div class="meta-row"><span>ITC-HS India</span><span>2932 9990</span></div>
+    <div class="meta-row"><span>Report date</span><span>October 2026</span></div>
+    <div class="meta-row"><span>Verdict</span><span style="color:#ffcc80">CONDITIONAL</span></div>
+  </div>
+  <div class="badges">
+    <span class="sidebar-badge badge-mode">Secondary Research Only</span>
+    <span class="sidebar-badge badge-warning">Verdict: Conditional</span>
+    <span class="sidebar-badge badge-approved">TSCA Listed</span>
+    <span class="sidebar-badge badge-regulated">Import: Free (DGFT)</span>
+  </div>
+  <div class="confidential-notice">
+    <div class="conf-title">🔒 CONFIDENTIAL</div>
+    <div class="conf-text">For Internal Management Use Only. Based on publicly available secondary research. Market size estimates from third-party sources may vary. Not investment or financial advice.</div>
+  </div>
+  <nav class="nav">
+    <div class="nav-group">Overview</div>
+    <a href="#exec" class="nav-link" data-section="exec"><span class="nav-num">ES</span> Executive Summary</a>
+    <div class="nav-group">Product &amp; Technology</div>
+    <a href="#s01" class="nav-link" data-section="s01"><span class="nav-num">01</span> Product Overview</a>
+    <a href="#s02" class="nav-link" data-section="s02"><span class="nav-num">02</span> Synthesis &amp; Manufacturing</a>
+    <a href="#s03" class="nav-link" data-section="s03"><span class="nav-num">03</span> Applications &amp; Markets</a>
+    <div class="nav-group">Market</div>
+    <a href="#s04" class="nav-link" data-section="s04"><span class="nav-num">04</span> Market Analysis</a>
+    <a href="#s05" class="nav-link" data-section="s05"><span class="nav-num">05</span> News &amp; Intelligence</a>
+    <a href="#s06" class="nav-link" data-section="s06"><span class="nav-num">06</span> Pricing Intelligence</a>
+    <div class="nav-group">Compliance &amp; Customers</div>
+    <a href="#s07" class="nav-link" data-section="s07"><span class="nav-num">07</span> Regulatory &amp; Compliance</a>
+    <a href="#s08" class="nav-link" data-section="s08"><span class="nav-num">08</span> Target Customers</a>
+    <div class="nav-group">Strategy</div>
+    <a href="#s09" class="nav-link" data-section="s09"><span class="nav-num">09</span> Strategic Frameworks</a>
+    <a href="#s10" class="nav-link" data-section="s10"><span class="nav-num">10</span> Feasibility &amp; Verdict</a>
+    <div class="nav-group">Appendix</div>
+    <a href="#refs" class="nav-link" data-section="refs"><span class="nav-num">SR</span> Sources &amp; References</a>
+  </nav>
+  <div class="pdf-wrap">
+    <button class="pdf-btn" type="button" onclick="window.print()">⬇ Download PDF</button>
+    <div class="pdf-hint">Chrome → Destination: “Save as PDF” → enable “Background graphics”</div>
+  </div>
+</aside>
+
+<!-- ======================= MAIN ======================= -->
+<main class="main-content">
+
+<header class="hero">
+  <span class="report-type">Report Type: Secondary Market Research — No Trade Data</span>
+  <h1>Spiroglycol (SPG)</h1>
+  <div class="sub">3,9-Bis(1,1-dimethyl-2-hydroxyethyl)-2,4,8,10-tetraoxaspiro[5.5]undecane — a rigid spiro-acetal specialty diol used to raise heat resistance, transparency and stability of polyesters, polycarbonates, antioxidants and UV-curable resins.</div>
+  <div class="chips">
+    <span class="chip">CAS 1455-42-1</span>
+    <span class="chip">C<sub>15</sub>H<sub>28</sub>O<sub>6</sub> · MW 304.38</span>
+    <span class="chip">EC 485-230-3</span>
+    <span class="chip">HS 2932.99 / ITC-HS 29329990</span>
+    <span class="chip">Specialty polyol (diol)</span>
+    <span class="chip">October 2026</span>
+  </div>
+  <div class="prepared">Prepared by: Market Intelligence · CONFIDENTIAL — Internal Use Only</div>
+  <div class="kpis">
+    <div class="kpi"><div class="kpi-label">Global Market (2025)</div><div class="kpi-value">US$100–130M</div><div class="kpi-sub">Triangulated; published range US$44–187 M <a href="https://pmarketresearch.com/?p=2630234">[26]</a><a href="https://www.marketresearchintellect.com/product/spiroglycol-market/">[27]</a></div></div>
+    <div class="kpi"><div class="kpi-label">Growth (CAGR)</div><div class="kpi-value">5.7–7.2%</div><div class="kpi-sub">2025–2035 forecasts <a href="https://dataintelo.com/report/global-spiroglycol-market">[25]</a><a href="https://www.marketresearchintellect.com/product/spiroglycol-market/">[27]</a></div></div>
+    <div class="kpi"><div class="kpi-label">Indian Producers</div><div class="kpi-value">0 identified</div><div class="kpi-sub">≈100% import-dependent (analyst inference)</div></div>
+    <div class="kpi"><div class="kpi-label">India Import Duty</div><div class="kpi-value">7.5% BCD</div><div class="kpi-sub">+0.75% SWS +18% IGST; policy Free <a href="https://treayo.com/en/hs/india/29329990">[36]</a></div></div>
+    <div class="kpi"><div class="kpi-label">Lead Producer</div><div class="kpi-value">MGC (Japan)</div><div class="kpi-sub">Mitsubishi Gas Chemical — SPG &amp; ALTESTER <a href="https://pr.mono.ipros.com/en/mgc/product/detail/2000431737">[7]</a></div></div>
+    <div class="kpi"><div class="kpi-label">Research Price (India)</div><div class="kpi-value">₹6,700/500g</div><div class="kpi-sub">TCI India, &gt;98% GC, ex-tax <a href="https://tcichemicals.com/IN/en/p/B1158">[4]</a></div></div>
+  </div>
+</header>
+
+<div class="content">
+
+<!-- print-only TOC (clickable in Chrome PDF) -->
+<div class="card print-toc">
+  <h3>Contents</h3>
+  <a href="#exec">Executive Summary</a> · <a href="#s01">01 Product Overview</a> · <a href="#s02">02 Synthesis &amp; Manufacturing</a> · <a href="#s03">03 Applications &amp; Markets</a> · <a href="#s04">04 Market Analysis</a> · <a href="#s05">05 News &amp; Intelligence</a> · <a href="#s06">06 Pricing</a> · <a href="#s07">07 Regulatory</a> · <a href="#s08">08 Target Customers</a> · <a href="#s09">09 Strategic Frameworks</a> · <a href="#s10">10 Feasibility &amp; Verdict</a> · <a href="#refs">Sources</a>
+</div>
+
+<!-- ======================= EXECUTIVE SUMMARY ======================= -->
+<section id="exec" class="report-section">
+  <div class="sec-head"><div class="sec-num">ES</div><h2>Executive Summary</h2></div>
+  <div class="exec">
+    <div class="card">
+      <h3>What management needs to know</h3>
+      <ul class="tight">
+        <li><b>Niche, concentrated specialty diol.</b> SPG is made by acid-catalysed acetalisation of hydroxypivalaldehyde (HPA, the neopentyl-glycol intermediate) with pentaerythritol <a class="src" href="https://patents.google.com/patent/EP1598357B1/en">[10]</a>. Mitsubishi Gas Chemical (MGC) is the reference producer and also consumes SPG in its own ALTESTER copolyesters <a class="src" href="https://pr.mono.ipros.com/en/mgc/product/detail/2000167910">[16]</a>.</li>
+        <li><b>Small, unreliable market numbers.</b> Published 2025 sizes range from US$43.9 M <a class="src" href="https://dataintelo.com/report/global-spiroglycol-market">[25]</a> to US$187 M (2026) <a class="src" href="https://markwideresearch.com/spiroglycol-market">[28]</a>; one report (US$1.3 B) clearly conflates SPG with commodity glycols <a class="src" href="https://www.wiseguyreports.com/reports/spiroglycol-market">[29]</a>. Our triangulated view: <b>~US$100–130 M, 5.7–7.2% CAGR</b>.</li>
+        <li><b>India: no producer, real feedstock base.</b> No Indian SPG producer was identified; India has large pentaerythritol capacity (Perstorp 40 kt/y Gujarat, Kanoria, Asian Paints) <a class="src" href="https://polymerspaintcolourjournal.com/?p=18199">[40]</a><a class="src" href="https://www.indiainfoline.com/company/kanoria-chemicals-industries-ltd-share-price-management/summary/743">[37]</a> but no merchant HPA/NPG.</li>
+        <li><b>Demand pull exists.</b> Indian specialty polyester (Ester Industries specialty polymer volumes +51% y/y in Q2 FY26) <a class="src" href="https://packagingsouthasia.com/type-of-article/industry-news/ester-industries-q2/">[51]</a>, polymer antioxidants (SPG is ~41 wt% of AO-80 type antioxidant, CAS 90498-90-1) <a class="src" href="https://tcichemicals.com/IL/en/p/T3804">[23]</a>, UV/powder coatings and PVC stabilisers.</li>
+        <li><b>Low regulatory friction.</b> Import “Free”, BCD 7.5% <a class="src" href="https://treayo.com/en/hs/india/29329990">[36]</a>; no GHS hazard statements on TCI listing <a class="src" href="https://www.tcichemicals.com/OF/en/p/B1158">[3]</a>; TSCA listed <a class="src" href="https://www.fishersci.com/shop/products/3-9-bis-1-1-dimethyl-2-hydroxyethyl-2-4-8-10-tetraoxaspiro-5-5-undecane-tci-america-2/B1158500G">[6]</a>; Japan ENCS 5-5567 <a class="src" href="https://www.tcichemicals.com/JP/en/p/B1158">[5]</a>.</li>
+      </ul>
+    </div>
+    <div>
+      <div class="verdict v-cond">
+        <div class="vt">OVERALL RECOMMENDATION</div>
+        <div class="vv">CONDITIONAL</div>
+        <p><b>Enter now</b> through Import &amp; Domestic Trading and Sourcing &amp; Marketing (asset-light, no domestic competitor, non-hazardous logistics), backed by CRO analytical/derivative support.</p>
+        <p><b>Defer manufacturing</b> until (a) validated Indian demand ≥1,000 t/y or anchored offtake, and (b) a reliable HPA route is secured.</p>
+      </div>
+      <div class="card" style="margin-top:12px">
+        <div class="tbl-wrap"><table class="tbl">
+          <tbody>
+            <tr><td class="k">Top business mode</td><td>Import &amp; Domestic Trading (Japan/China → India)</td></tr>
+            <tr class="india"><td class="k">India status</td><td>Import-dependent; research grade stocked in Hyderabad by TCI India <a class="src" href="https://tcichemicals.com/IN/en/p/B1158">[4]</a></td></tr>
+            <tr><td class="k">Key risk</td><td>Single dominant supplier (MGC) undergoing portfolio restructuring <a class="src" href="https://quartr.com/events/mitsubishi-gas-chemical-company-inc-4182-investor-presentation_FRFdhhGK">[47]</a></td></tr>
+            <tr><td class="k">Decision gate</td><td>Bulk RFQ + 15 customer interviews within 60 days</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 01 ======================= -->
+<section id="s01" class="report-section">
+  <div class="sec-head"><div class="sec-num">01</div><h2>Product Overview &amp; Identity</h2></div>
+
+  <div class="card">
+    <h3>Introduction</h3>
+    <p>Spiroglycol (SPG) is a C<sub>15</sub> diol whose two primary hydroxyl groups hang off a central <b>2,4,8,10-tetraoxaspiro[5.5]undecane</b> core — two 1,3-dioxane rings sharing one spiro carbon derived from pentaerythritol. MGC describes it as a special polyol manufactured from neopentyl-glycol intermediates whose spiro ring gives derived compounds excellent thermal stability; built into polymers it improves heat resistance, impact resistance, hardness and mouldability <a class="src" href="https://pr.mono.ipros.com/en/mgc/product/detail/2000431737">[7]</a>. Commercially it is a <b>performance monomer/modifier</b> rather than a volume chemical: it is copolymerised into PET (raising Tg and keeping the resin amorphous and transparent) <a class="src" href="https://data.epo.org/publication-server/rest/v1.2/patents/EP4245788NWA1/document.html">[15]</a>, into polycarbonates for a low photoelastic constant <a class="src" href="https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/8816039">[14]</a>, and esterified into high-performance phenolic antioxidants <a class="src" href="https://www.chemicalbook.com/ProductChemicalPropertiesCB4854841_EN.htm">[21]</a>.</p>
+    <p class="small"><b>Common synonyms:</b> SPG; Spiro glycol; Bis(hydroxypivalaldehyde) pentaerythritol acetal (cyclic acetal); 2,2-Dimethyl-3-hydroxypropionaldehyde pentaerythrityl bisacetal; 2,2'-(2,4,8,10-Tetraoxaspiro[5.5]undecane-3,9-diyl)bis(2-methylpropan-1-ol); β,β,β',β'-Tetramethyl-2,4,8,10-tetraoxaspiro[5.5]undecane-3,9-diethanol <a class="src" href="https://www.chemicalbook.com/CASEN_1455-42-1.htm">[2]</a><a class="src" href="https://www.fishersci.com/shop/products/3-9-bis-1-1-dimethyl-2-hydroxyethyl-2-4-8-10-tetraoxaspiro-5-5-undecane-tci-america-2/B1158500G">[6]</a></p>
+  </div>
+
+  <div class="card">
+    <h3>Chemical Identity</h3>
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th>Identifier</th><th>Value</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr><td class="k">IUPAC name</td><td>2-[3-(1-hydroxy-2-methylpropan-2-yl)-2,4,8,10-tetraoxaspiro[5.5]undecan-9-yl]-2-methylpropan-1-ol</td><td><a class="src" href="https://www.fishersci.com/shop/products/3-9-bis-1-1-dimethyl-2-hydroxyethyl-2-4-8-10-tetraoxaspiro-5-5-undecane-tci-america-2/B1158500G">[6]</a></td></tr>
+        <tr><td class="k">Common chemical name</td><td>3,9-Bis(1,1-dimethyl-2-hydroxyethyl)-2,4,8,10-tetraoxaspiro[5.5]undecane</td><td><a class="src" href="https://www.chemicalbook.com/CASEN_1455-42-1.htm">[2]</a></td></tr>
+        <tr><td class="k">CAS number</td><td>1455-42-1</td><td><a class="src" href="https://www.tcichemicals.com/OF/en/p/B1158">[3]</a></td></tr>
+        <tr><td class="k">Molecular formula</td><td>C<sub>15</sub>H<sub>28</sub>O<sub>6</sub></td><td><a class="src" href="https://www.chemicalbook.com/CASEN_1455-42-1.htm">[2]</a></td></tr>
+        <tr><td class="k">Molecular weight</td><td>304.38 g/mol (MGC: 304.4)</td><td><a class="src" href="https://www.tcichemicals.com/OF/en/p/B1158">[3]</a><a class="src" href="https://pr.mono.ipros.com/en/mgc/product/detail/2000431737">[7]</a></td></tr>
+        <tr><td class="k">PubChem CID</td><td>7569008</td><td><a class="src" href="https://pubchem.ncbi.nlm.nih.gov/compound/7569008">[1]</a></td></tr>
+        <tr><td class="k">InChI Key</td><td class="mono">BPZIYBJCZRUDEG-UHFFFAOYSA-N</td><td><a class="src" href="https://www.fishersci.com/shop/products/3-9-bis-1-1-dimethyl-2-hydroxyethyl-2-4-8-10-tetraoxaspiro-5-5-undecane-tci-america-2/B1158500G">[6]</a></td></tr>
+        <tr><td class="k">SMILES</td><td class="mono">CC(C)(CO)C1OCC2(CO1)COC(OC2)C(C)(C)CO</td><td><a class="src" href="https://www.fishersci.com/shop/products/3-9-bis-1-1-dimethyl-2-hydroxyethyl-2-4-8-10-tetraoxaspiro-5-5-undecane-tci-america-2/B1158500G">[6]</a></td></tr>
+        <tr><td class="k">EC number</td><td>485-230-3 (4xx-series list number, typical of substances notified under the pre-REACH NONS scheme)</td><td><a class="src" href="https://www.chemicalbook.com/CASEN_1455-42-1.htm">[2]</a><a class="src" href="https://b2b-nl.vwr.com/store/product/30001989/3-9-bis-1-1-dimethyl-2-hydroxyethyl-2-4-8-10-tetraoxaspiro-5-5-undecane-98-0-gc_assay_method">[59]</a></td></tr>
+        <tr><td class="k">MDL / Reaxys</td><td>MFCD00059794 / 1574570</td><td><a class="src" href="https://www.tcichemicals.com/OF/en/p/B1158">[3]</a></td></tr>
+        <tr><td class="k">Japan ENCS (CSCL)</td><td>5-5567</td><td><a class="src" href="https://www.tcichemicals.com/JP/en/p/B1158">[5]</a></td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <div class="card">
+    <h3>Physical &amp; Chemical Properties</h3>
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th>Property</th><th>Value</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr><td class="k">Appearance</td><td>White to almost-white powder / crystal</td><td><a class="src" href="https://www.tcichemicals.com/OF/en/p/B1158">[3]</a><a class="src" href="https://pr.mono.ipros.com/en/mgc/product/detail/2000431737">[7]</a></td></tr>
+        <tr><td class="k">Physical state (20 °C)</td><td>Solid (crystalline powder)</td><td><a class="src" href="https://www.tcichemicals.com/OF/en/p/B1158">[3]</a></td></tr>
+        <tr><td class="k">Melting point</td><td>196–202 °C (TCI spec); 198–200 °C (ChemicalBook); 200 °C (MGC)</td><td><a class="src" href="https://www.tcichemicals.com/OF/en/p/B1158">[3]</a><a class="src" href="https://www.chemicalbook.com/CASEN_1455-42-1.htm">[2]</a><a class="src" href="https://pr.mono.ipros.com/en/mgc/product/detail/2000431737">[7]</a></td></tr>
+        <tr><td class="k">Boiling point</td><td>434.2 ± 40 °C (predicted, not measured)</td><td><a class="src" href="https://www.chemicalbook.com/CASEN_1455-42-1.htm">[2]</a></td></tr>
+        <tr><td class="k">Density</td><td>Specific gravity 0.3 quoted by MGC (consistent with a bulk/apparent powder density). True crystal density not publicly available.</td><td><a class="src" href="https://pr.mono.ipros.com/en/mgc/product/detail/2000431737">[7]</a></td></tr>
+        <tr><td class="k">Flash point</td><td>201 °C</td><td><a class="src" href="https://pr.mono.ipros.com/en/mgc/product/detail/2000431737">[7]</a></td></tr>
+        <tr><td class="k">Refractive index</td><td>Specific data not publicly available for the monomer (solid). Relevance is via copolymers — SPG-PET grades are refractive-index-matched to PET for transparent blending.</td><td><a class="src" href="https://pr.mono.ipros.com/en/mgc/product/detail/2000167910">[16]</a></td></tr>
+        <tr><td class="k">Vapour pressure</td><td>Specific data not publicly available — expected negligible at ambient (high-melting, high-boiling diol; analyst estimate).</td><td>—</td></tr>
+        <tr><td class="k">Solubility</td><td>4.4 g/100 g methanol at 30 °C; “almost transparent” in hot methanol</td><td><a class="src" href="https://pr.mono.ipros.com/en/mgc/product/detail/2000431737">[7]</a><a class="src" href="https://www.tcichemicals.com/OF/en/p/B1158">[3]</a></td></tr>
+        <tr><td class="k">Stability / storage</td><td>Room temperature; cool &amp; dark (&lt;15 °C) recommended. For polyester feed: moisture ≤0.1 mass% and storage/transfer under inert gas.</td><td><a class="src" href="https://www.tcichemicals.com/OF/en/p/B1158">[3]</a><a class="src" href="https://data.epo.org/publication-server/rest/v1.2/patents/EP4245788NWA1/document.html">[15]</a></td></tr>
+        <tr><td class="k">Thermal-stability sensitivities</td><td>Polycarbonate-grade SPG needs nitrogen ≤9 ppm and formyl/aldehyde ≤100 ppm; otherwise decomposes during extrusion (silver streaks, foaming)</td><td><a class="src" href="https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/8816039">[14]</a></td></tr>
+        <tr><td class="k">GHS hazard</td><td>No hazard statements listed by TCI (indicative “not classified”) — confirm against supplier SDS</td><td><a class="src" href="https://www.tcichemicals.com/OF/en/p/B1158">[3]</a></td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <div class="card">
+    <h3>Product Grades</h3>
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th>Grade</th><th>Purity</th><th>Primary use</th><th>Stabiliser / key spec</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr><td class="k">Research / reagent</td><td>&gt;98.0% (GC) — TCI; 97% — Alfa Aesar; 95–98% catalogue grades</td><td>R&amp;D, derivative synthesis, reference</td><td>None; MP 196–202 °C spec</td><td><a class="src" href="https://www.tcichemicals.com/OF/en/p/B1158">[3]</a><a class="src" href="https://m.chemicalbook.com/price/1455-42-1.htm">[58]</a></td></tr>
+        <tr><td class="k">Industrial (resin modifier)</td><td>≥99% (market segmented ≥99% / &lt;99%)</td><td>PET/PU/UV-curable resins, antioxidant synthesis</td><td>None; controlled particle size</td><td><a class="src" href="https://www.transparencymarketresearch.com/spiroglycol-market.html">[24]</a><a class="src" href="https://patents.google.com/patent/EP1598357B1/en">[10]</a></td></tr>
+        <tr><td class="k">High-purity polymer (PC/optical, PET)</td><td>High purity; residual base/salt 10–1,000 ppm after alkaline wash</td><td>Copolycarbonate, ALTESTER copolyester</td><td>N ≤9 ppm; aldehyde ≤100 ppm; 1% MeOH solution pH 7–12; moisture ≤0.1%</td><td><a class="src" href="https://patents.google.com/patent/US9067950">[11]</a><a class="src" href="https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/8816039">[14]</a><a class="src" href="https://data.epo.org/publication-server/rest/v1.2/patents/EP4245788NWA1/document.html">[15]</a></td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <div class="card">
+    <h3>HS Codes</h3>
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th>Jurisdiction</th><th>Code</th><th>Description</th><th>Duty / Policy</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr class="india"><td class="k">🇮🇳 India (ITC-HS)</td><td>2932 9990</td><td>Heterocyclic compounds with oxygen hetero-atom(s) only — Other</td><td>BCD 7.5% + SWS 0.75% + IGST 18% (gross 27.735%); import policy Free</td><td><a class="src" href="https://treayo.com/en/hs/india/29329990">[36]</a></td></tr>
+        <tr><td class="k">WCO (HS-6)</td><td>2932.99</td><td>Other heterocyclic compounds with oxygen hetero-atom(s) only</td><td>Used by TCI for Japan exports (2932.99-000)</td><td><a class="src" href="https://www.tcichemicals.com/OF/en/p/B1158">[3]</a></td></tr>
+        <tr><td class="k">MFN benchmarks</td><td>2932.99.xx</td><td>National lines</td><td>USA Free · Japan 4.6% · China 4% · Korea 8% · UK 6% · Vietnam 5 · Thailand 30</td><td><a class="src" href="https://treayo.com/en/hs/india/29329990">[36]</a></td></tr>
+      </tbody>
+    </table></div>
+    <div class="alert a-warn"><b>Customs alert</b>SPG is a cyclic acetal; classify under heading 2932 (oxygen-only heterocycle), not 2905 (acyclic polyols) or 2909. Mis-declaration as a “glycol” is a common error. Japan-origin consignments may qualify for India–Japan CEPA preference with a valid Certificate of Origin — confirm the line-specific schedule before pricing <a class="src" href="https://taxguru.in/?p=37186">[56]</a><a class="src" href="https://www.Customs.go.jp/english/c-answer_e/pdf/FAX4035e.pdf">[57]</a>.</div>
+  </div>
+</section>
+
+<!-- ======================= 02 ======================= -->
+<section id="s02" class="report-section">
+  <div class="sec-head"><div class="sec-num">02</div><h2>Synthesis &amp; Manufacturing</h2></div>
+
+  <div class="card">
+    <h3>Key Synthesis Routes</h3>
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th>#</th><th>Route</th><th>Starting materials</th><th>Conditions</th><th>Yield / purity</th><th>Reference</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td><b>Aqueous acid-catalysed acetalisation</b> (conventional) <span class="tag t-grey">Petrochemical</span></td><td>Hydroxypivalaldehyde (HPA) + pentaerythritol (PE)</td><td>Water, acid catalyst; SPG crystallises; neutralise with alkali, filter, wash, dry (JP 59-148776A)</td><td>70–90 mol% (prior-art level); ≥10× product weight of waste water</td><td><a class="src" href="https://patents.google.com/patent/EP1598357B1/en">[10]</a></td></tr>
+        <tr><td>2</td><td><b>MGC seeded, controlled-pH process</b> <span class="tag t-blue">Industrial benchmark</span></td><td>HPA (amines/amine salts ≤1.5 wt%) + PE</td><td>Seed crystals 1.5–30 wt%; pH 0.1–4.0 throughout; SPG content 5–35 wt%; mother-liquor reuse 50–98%; alkaline wash for heat stability</td><td>High purity, larger crystals, improved yield &amp; less waste water (exact yield not disclosed in abstract)</td><td><a class="src" href="https://patents.google.com/patent/EP1598357B1/en">[10]</a><a class="src" href="https://patents.google.com/patent/US9067950">[11]</a></td></tr>
+        <tr><td>3</td><td><b>Perstorp progressive-dosing seeded process</b> <span class="tag t-blue">Industrial IP</span></td><td>PE + HPA in water + acid catalyst</td><td>SPG seed 0.5–1.0 wt%; HPA added progressively at a rate set by monitoring particle growth</td><td>Not disclosed</td><td><a class="src" href="https://data.epo.org/gpi/EP3313848A4">[12]</a></td></tr>
+        <tr><td>4</td><td><b>One-pot route</b> <span class="tag t-purple">Multi-step in one pot</span></td><td>Pentaerythritol + isobutyraldehyde + formaldehyde</td><td>In-situ aldol to HPA then acetalisation; eliminates two unit operations</td><td>93.6% yield; 99.0% purity (lab scale)</td><td><a class="src" href="https://ajol.info/index.php/bcse/article/view/61353">[13]</a></td></tr>
+        <tr><td>5</td><td><b>Water / immiscible organic solvent</b> (JP 2001-55388A)</td><td>HPA + PE</td><td>Biphasic solvent to reduce waste water</td><td>Purity only 98–99%; solvent recovery required</td><td><a class="src" href="https://patents.justia.com/patent/20050261506">[10]</a></td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <div class="card">
+    <h3>Key Raw Materials</h3>
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th>Material</th><th>Source / origin</th><th>India availability</th><th>Relevance</th></tr></thead>
+      <tbody>
+        <tr class="india"><td class="k">Pentaerythritol (PE)</td><td>Formaldehyde + acetaldehyde. India: Kanoria Chemicals (top producer; capacity expanded 2026) <a class="src" href="https://www.indiainfoline.com/company/kanoria-chemicals-industries-ltd-share-price-management/summary/743">[37]</a>; Asian Paints Penta, Cuddalore (8,760 MT) <a class="src" href="https://energy.greenbusinesscentre.com/energyawards/enepresent23/general/Asian%20Paints%20Limited,Cuddalore.pdf">[39]</a>; Perstorp Sayakha, Bharuch (40,000 t/y) <a class="src" href="https://polymerspaintcolourjournal.com/?p=18199">[40]</a>. India output 15.6 kt in FY2023 <a class="src" href="https://statista.com/statistics/727857/india-pentaerythritol-anhydride-production-volume">[41]</a></td><td><span class="tag t-green">HIGH</span></td><td>1 mol per mol SPG (spiro core)</td></tr>
+        <tr class="india"><td class="k">Hydroxypivalaldehyde (HPA)</td><td>Aldol of isobutyraldehyde + formaldehyde; captive intermediate inside NPG plants (MGC, BASF, Perstorp, LG, KH Neochem). Rarely traded.</td><td><span class="tag t-red">LOW / NONE</span></td><td>2 mol per mol SPG; the critical bottleneck <a class="src" href="https://pr.mono.ipros.com/en/mgc/product/detail/2000431737">[7]</a></td></tr>
+        <tr class="india"><td class="k">Isobutyraldehyde (IBA)</td><td>Oxo by-product (propylene hydroformylation). India price US$1.55/kg in Q2 2026, cheapest of 4 tracked regions <a class="src" href="https://www.expertmarketresearch.com/price-forecast/isobutyraldehyde-price-trends">[42]</a>; global IBA availability flagged as an NPG constraint <a class="src" href="https://www.spglobal.com/content/dam/spglobal/ci/en/documents/products/pdf/CI_0325_Global_CEH_Neopentyl_Polyhydric_Alcohols_Abstract.pdf">[43]</a></td><td><span class="tag t-amber">MEDIUM</span></td><td>HPA precursor (one-pot route 4)</td></tr>
+        <tr class="india"><td class="k">Formaldehyde</td><td>Methanol oxidation. Kanoria alone: 180,000 TPA formaldehyde capacity <a class="src" href="https://www.indiainfoline.com/company/kanoria-chemicals-industries-ltd-share-price-management/summary/743">[37]</a></td><td><span class="tag t-green">HIGH</span></td><td>HPA &amp; PE precursor</td></tr>
+        <tr class="india"><td class="k">Acid catalyst / alkali</td><td>Patents specify an acid catalyst (mineral or sulfonic acid) and alkaline neutralisation/wash <a class="src" href="https://patents.google.com/patent/EP1598357B1/en">[10]</a></td><td><span class="tag t-green">HIGH</span></td><td>Process consumables</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <div class="card">
+    <h3>Manufacturing Complexity Assessment</h3>
+    <div class="prop-grid">
+      <div class="prop"><div class="pl">Complexity rating</div><div class="pv"><span class="tag t-amber">MEDIUM</span></div><div class="pd">Two-step chemistry (aldol + acetal) with crystallisation control; no exotic hazards.</div></div>
+      <div class="prop"><div class="pl">Key challenge</div><div class="pv">Equilibrium &amp; crystal control</div><div class="pd">Acetalisation is reversible under acid; SPG partly redissolves; rapid crystallisation gives fine, hard-to-handle crystals <a class="src" href="https://data.epo.org/publication-server/rest/v1.2/patents/EP1598357NWA1/document.html">[10]</a>.</div></div>
+      <div class="prop"><div class="pl">Effluent load</div><div class="pv">≥10× product mass</div><div class="pd">Conventional process waste water — mother-liquor recycle is essential for India ZLD norms <a class="src" href="https://patents.google.com/patent/EP1598357B1/en">[10]</a>.</div></div>
+      <div class="prop"><div class="pl">Temperature sensitivity</div><div class="pv">Moderate</div><div class="pd">Impure SPG decomposes when heated in polymerisation; base wash &amp; low N/aldehyde specs needed <a class="src" href="https://patents.google.com/patent/US9067950">[11]</a><a class="src" href="https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/8816039">[14]</a>.</div></div>
+      <div class="prop"><div class="pl">Catalyst dependency</div><div class="pv">Low</div><div class="pd">Cheap homogeneous acid; know-how lies in pH window (0.1–4.0) and amine control in HPA <a class="src" href="https://data.epo.org/gpi/EP1598357B1">[10]</a>.</div></div>
+      <div class="prop"><div class="pl">IP position</div><div class="pv">Partly open</div><div class="pd">EP1598357B1 shown as expired; US9067950 shown active (Google Patents legal-status estimates) <a class="src" href="https://patents.google.com/patent/EP1598357B1/en">[10]</a><a class="src" href="https://patents.google.com/patent/US9067950">[11]</a>.</div></div>
+    </div>
+    <div class="alert a-success"><b>🇮🇳 India strategic note</b>India already hosts world-scale pentaerythritol (Perstorp 40 kt/y, Kanoria, Asian Paints) and abundant formaldehyde, with domestic isobutyraldehyde priced at US$1.55/kg. The single missing link is HPA, which is only made captively inside NPG plants. A future Indian SPG unit is therefore technically feasible via the one-pot IBA + formaldehyde + PE route (93.6% lab yield) or by partnering with a PE/NPG player — notably Perstorp, which owns both an Indian PE plant and an SPG process patent <a class="src" href="https://data.epo.org/gpi/EP3313848A4">[12]</a><a class="src" href="https://ajol.info/index.php/bcse/article/view/61353">[13]</a><a class="src" href="https://polymerspaintcolourjournal.com/?p=18199">[40]</a>. Treat this as a Phase-3 option, not a launch strategy.</div>
+  </div>
+</section>
+
+<!-- ======================= 03 ======================= -->
+<section id="s03" class="report-section">
+  <div class="sec-head"><div class="sec-num">03</div><h2>Industry Applications, End-Products &amp; Application Market Sizes</h2></div>
+
+  <div class="alert a-info"><b>How SPG creates value</b>MGC lists its main uses as resin modifiers for PET, PC and PU, antioxidant raw material, UV-curable resin raw material and PVC stabilisers <a class="src" href="https://pr.mono.ipros.com/en/mgc/product/detail/2000431737">[7]</a>, and a developed derivative range of acrylates, epoxies and alkylene-oxide adducts <a class="src" href="https://pr.mono.ipros.com/en/mgc/product/detail/2000462930">[8]</a>. SPG is always a minor-by-weight, high-impact component — its market value is a small slice of each downstream market below.</div>
+
+  <!-- A -->
+  <div class="card">
+    <h3>A. Specialty Polymers — SPG-modified Copolyesters (largest cluster)</h3>
+    <p>Replacing part of ethylene glycol in PET with SPG gives amorphous, transparent polyesters with higher Tg and melt strength. MGC’s polyester patents cover 5–60 mol% SPG in the glycol component, including foamed articles <a class="src" href="https://data.epo.org/publication-server/rest/v1.2/publication-dates/20011219/patents/EP1164155NWA1/document.html">[66]</a>.</p>
+    <h4>End-products / formulations</h4>
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th>End-product</th><th>Details</th><th>Key companies</th></tr></thead>
+      <tbody>
+        <tr><td class="k">ALTESTER S2000 / S3000 / S4500</td><td>SPG-PET with Tg ≈ 95 / 100 / 110 °C <a class="src" href="https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/12031025">[17]</a>; S4500 replaces 45 mol% of EG with SPG <a class="src" href="https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/11149249">[67]</a></td><td>Mitsubishi Gas Chemical</td></tr>
+        <tr><td class="k">ALTESTER SN / SH / SC grades</td><td>SN: heat resistance to 110 °C, RI-matched to PET, UV absorbing; SH: heat + impact + transparency for extrusion/injection/blow; SC: crystalline grade <a class="src" href="https://pr.mono.ipros.com/en/mgc/product/detail/2000167910">[16]</a></td><td>Mitsubishi Gas Chemical</td></tr>
+        <tr><td class="k">Heat-resistant transparent containers, sheets, films; PC/PET/PETG/PBT blend modifier; foams</td><td>Transparent miscibility with PC, PET, PETG, PBT; high melt strength suits foaming <a class="src" href="https://pr.mono.ipros.com/en/mgc/product/detail/2000167910">[16]</a></td><td>Converters, film makers</td></tr>
+        <tr><td class="k">Cell-culture substrates</td><td>SPG-modified PET evaluated as cell-culture base material <a class="src" href="https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/11149249">[67]</a></td><td>Labware makers</td></tr>
+      </tbody>
+    </table></div>
+    <h4>Application market size</h4>
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th>Segment</th><th>Global size</th><th>CAGR</th><th>Major manufacturers</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr><td>Copolyesters (all types)</td><td>US$1.34 B (2025) → US$2.21 B (2032)</td><td>7.42%</td><td>Eastman, SK Chemicals, MGC, Indorama</td><td><a class="src" href="https://www.reportprime.com/copolyesters-r204">[30]</a></td></tr>
+        <tr><td>PETG</td><td>US$1.04 B (2025) → US$1.83 B (2032)</td><td>8.45%</td><td>Eastman, SK Chemicals</td><td><a class="src" href="https://www.reportprime.com/polyethylene-terephthalate-glycol-petg-r525.md">[31]</a></td></tr>
+      </tbody>
+    </table></div>
+    <p class="small muted">Other grades/uses: SPG can be combined with 2,6-NDCA in PET for higher heat resistance <a class="src" href="https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/11149249">[67]</a>; MGC continues to file SPG-PET process improvements (inert handling, moisture ≤0.1%) <a class="src" href="https://data.epo.org/publication-server/rest/v1.2/patents/EP4245788NWA1/document.html">[15]</a><a class="src" href="https://patents.google.com/patent/JP6996489B2/en">[65]</a>.</p>
+  </div>
+
+  <!-- B -->
+  <div class="card">
+    <h3>B. Polycarbonates &amp; Optical Resins (Electronics-adjacent)</h3>
+    <p>SPG is the preferred aliphatic diol in certain copolycarbonates because it gives a low photoelastic constant (low birefringence) <a class="src" href="https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/8816039">[14]</a> — a key need for high-resolution smartphone imaging lenses where BPA-polycarbonate birefringence is too high <a class="src" href="https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/11578168">[62]</a>.</p>
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th>End-product</th><th>Details</th><th>Key companies</th></tr></thead>
+      <tbody>
+        <tr><td class="k">SPG copolycarbonate</td><td>Low photoelastic constant; requires low-N, low-aldehyde SPG to avoid silver streaks/foaming</td><td>Teijin (patent family) <a class="src" href="https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/8816039">[14]</a></td></tr>
+        <tr><td class="k">Optical lens resins</td><td>MGC kept its Iupizeta EP optical resin while exiting commodity PC at Kashima <a class="src" href="https://chemxplore.com/news/polycarbonate-production-discontinued-kashima-plant">[45]</a></td><td>MGC, Teijin</td></tr>
+      </tbody>
+    </table></div>
+    <div class="alert a-warn"><b>Indirect / qualified role</b>Specific SPG-in-optics market size not publicly available. Proxy: demand tracks camera-module lens resin volumes; SPG’s share is limited because SPG-PC thermal stability is poorer than BPA-PC <a class="src" href="https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/8816039">[14]</a>. A claim that Korean display makers are qualifying SPG polyesters for flexible substrates comes from a low-confidence source <a class="src" href="https://markwideresearch.com/spiroglycol-market">[28]</a>.</div>
+  </div>
+
+  <!-- C -->
+  <div class="card">
+    <h3>C. Polymer Additives — High-performance Phenolic Antioxidants</h3>
+    <p>SPG is the backbone of the antioxidant <b>3,9-bis[2-[3-(3-tert-butyl-4-hydroxy-5-methylphenyl)propionyloxy]-1,1-dimethylethyl]-2,4,8,10-tetraoxaspiro[5.5]undecane</b> (CAS 90498-90-1; trade names AO-80 / Sumilizer GA-80), a non-discolouring, partially hindered phenolic for polyolefins <a class="src" href="https://www.chemicalbook.com/ProductChemicalPropertiesCB4854841_EN.htm">[21]</a>. With MW 740.98 <a class="src" href="https://tcichemicals.com/IL/en/p/T3804">[23]</a> vs SPG 304.38, <b>SPG is ≈41 wt% of the molecule</b> (analyst calculation) — every tonne of AO-80 consumes ~0.41 t SPG.</p>
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th>End-product</th><th>Details</th><th>Key companies</th></tr></thead>
+      <tbody>
+        <tr><td class="k">AO-80 / Sumilizer GA-80 (CAS 90498-90-1)</td><td>Listed under US FDA FCN 906 and EU food-contact materials <a class="src" href="https://www.thegoodscentscompany.com/data/rw1642951.html">[22]</a>; MP 124–128 °C <a class="src" href="https://tcichemicals.com/IL/en/p/T3804">[23]</a></td><td>Sumitomo Chemical (Sumilizer), ADEKA (ADK STAB AO-80)</td></tr>
+        <tr class="india"><td class="k">Reference standards (India)</td><td>Clearsynth (India) lists Sumilizer AG 80 as a characterised standard <a class="src" href="https://clearsynth.com/product/Sumilizer-AG-80">[63]</a></td><td>Clearsynth</td></tr>
+      </tbody>
+    </table></div>
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th>Segment</th><th>Global size</th><th>CAGR</th><th>Major manufacturers</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr><td>Antioxidants for polymer materials</td><td>US$5.16 B (2024) → US$8.26 B (2031); ~1,005 kt in 2024</td><td>7.0%</td><td>BASF, SI Group, Songwon, ADEKA, Sumitomo</td><td><a class="src" href="https://www.giikorea.co.kr/report/qyr1862122-antioxidant-polymer-materials-global-market-share.html">[32]</a></td></tr>
+        <tr><td>Plastic antioxidants</td><td>US$4.3 B (2024) → US$7.0 B (2033)</td><td>5.14%</td><td>As above</td><td><a class="src" href="https://imarcgroup.com/global-plastic-antioxidants-market">[33]</a></td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <!-- D -->
+  <div class="card">
+    <h3>D. Industrial Coatings — UV-curable Resins, Powder Coatings, Polyurethanes, PVC Stabilisers</h3>
+    <p>SPG di(meth)acrylates and polyesters give high-Tg, chemically resistant cured films <a class="src" href="https://pr.mono.ipros.com/en/mgc/product/detail/2000431737">[7]</a>. Perstorp patented tetraoxaspiro acrylates for radiation-curing lacquers, inks and adhesives <a class="src" href="https://patents.justia.com/patent/9388194">[19]</a>; MGC patented next-generation dispiro diols/di(meth)acrylates for higher thermal stability <a class="src" href="https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/10633391">[18]</a>. In UV-curable cycloaliphatic polyester powder coatings (SPG + CHDM + CHDA), Tg, tensile strength and modulus rise with SPG loading <a class="src" href="https://soar.wichita.edu/items/87be2043-a778-4049-ba15-1230cc66afe8">[20]</a>.</p>
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th>End-product</th><th>Details</th><th>Key companies</th></tr></thead>
+      <tbody>
+        <tr><td class="k">SPG diacrylate / epoxy / AO adducts</td><td>UV/EB inks, hard coats, adhesives</td><td>MGC; Perstorp (IP); acrylate monomer houses</td></tr>
+        <tr><td class="k">UV-curable powder coating polyesters</td><td>Raises Tg of cycloaliphatic resins to powder-viable levels</td><td>Academic (Wichita State / Univ. Akron) <a class="src" href="https://soar.wichita.edu/items/87be2043-a778-4049-ba15-1230cc66afe8">[20]</a></td></tr>
+        <tr><td class="k">PU chain extender / polyols</td><td>Hardness, heat resistance</td><td>MGC <a class="src" href="https://pr.mono.ipros.com/en/mgc/product/detail/2000462930">[8]</a></td></tr>
+        <tr><td class="k">PVC stabiliser component</td><td>Listed among MGC’s main SPG uses</td><td>Stabiliser formulators <a class="src" href="https://pr.mono.ipros.com/en/mgc/product/detail/2000431737">[7]</a></td></tr>
+      </tbody>
+    </table></div>
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th>Segment</th><th>Global size</th><th>CAGR</th><th>Major manufacturers</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr><td>UV-curable resin</td><td>US$3.0–3.5 B (2025)</td><td>2–4% to 2030</td><td>allnex, Arkema (Sartomer), IGM, DIC</td><td><a class="src" href="https://www.researchandmarkets.com/reports/5731274/uv-curable-resin-global-market-insights">[34]</a></td></tr>
+        <tr><td>UV-curable resins (broader scope)</td><td>US$7.3 B (2025)</td><td>n/d</td><td>IGM Resins and others</td><td><a class="src" href="https://www.dri.co.jp/auto/report/imarc/260601-uv-curable-resins-market-report-by-resin.html">[35]</a></td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <!-- E -->
+  <div class="card">
+    <h3>E. Research &amp; Reference Standards</h3>
+    <p>SPG is stocked by TCI (incl. Hyderabad, India), Thermo Fisher/Alfa Aesar (97%), Ambeed, AK Scientific and AA Blocks in 5 g–500 g packs <a class="src" href="https://tcichemicals.com/IN/en/p/B1158">[4]</a><a class="src" href="https://m.chemicalbook.com/price/1455-42-1.htm">[58]</a> — a small but high-margin CRO/derivative-synthesis channel.</p>
+  </div>
+
+  <!-- F -->
+  <div class="card">
+    <h3>F. Clusters assessed as Not Applicable / Unverified</h3>
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th>Cluster</th><th>Assessment</th></tr></thead>
+      <tbody>
+        <tr><td class="k">Pharmaceutical intermediates / excipients</td><td><span class="tag t-red">UNVERIFIED</span> One publisher frames SPG as a pharma excipient <a class="src" href="https://dataintelo.com/report/global-spiroglycol-market">[25]</a>; no pharmacopoeial monograph, API route or regulatory filing was found. Do not plan on pharma demand.</td></tr>
+        <tr><td class="k">Agrochemicals</td><td><span class="tag t-grey">N/A</span> No agrochemical use identified (a claim about Brazilian agrochemical demand comes from a low-confidence source <a class="src" href="https://markwideresearch.com/spiroglycol-market">[28]</a>).</td></tr>
+        <tr><td class="k">Food / flavour / fragrance; Cosmetics</td><td><span class="tag t-grey">N/A</span> No direct use. Indirect food-contact relevance only via AO-80 antioxidant <a class="src" href="https://www.thegoodscentscompany.com/data/rw1642951.html">[22]</a>.</td></tr>
+        <tr><td class="k">Semiconductor / photoresist</td><td><span class="tag t-grey">Indirect</span> Optical resins only (Cluster B); no photoresist use found.</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</section>
+
+<!-- ======================= 04 ======================= -->
+<section id="s04" class="report-section">
+  <div class="sec-head"><div class="sec-num">04</div><h2>Market Analysis</h2></div>
+
+  <div class="card">
+    <h3>4A — Global Market</h3>
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th>Publisher</th><th>Base value</th><th>Forecast</th><th>CAGR</th><th>Reliability</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr><td class="k">Dataintelo</td><td>US$43.9 M (2025)</td><td>US$82.7 M (2034)</td><td>7.2%</td><td><span class="tag t-amber">Medium-low</span> pharma-excipient framing</td><td><a class="src" href="https://dataintelo.com/report/global-spiroglycol-market">[25]</a></td></tr>
+        <tr><td class="k">pmarketresearch</td><td>US$108.5 M (2025)</td><td>US$168.8 M (2032)</td><td>6.52%</td><td><span class="tag t-green">Medium</span> segments match (high-purity, polyester, PC)</td><td><a class="src" href="https://pmarketresearch.com/?p=2630234">[26]</a></td></tr>
+        <tr><td class="k">Market Research Intellect</td><td>US$128 M (2025)</td><td>US$222 M (2035)</td><td>5.7%</td><td><span class="tag t-green">Medium</span> explicitly triangulated</td><td><a class="src" href="https://www.marketresearchintellect.com/product/spiroglycol-market/">[27]</a></td></tr>
+        <tr><td class="k">MarkWide Research</td><td>US$187.4 M (2026)</td><td>US$338.8 M (2035)</td><td>6.8%</td><td><span class="tag t-amber">Low</span> several implausible claims</td><td><a class="src" href="https://markwideresearch.com/spiroglycol-market">[28]</a></td></tr>
+        <tr><td class="k">WiseGuy Reports</td><td>US$1,320.6 M (2025)</td><td>US$2,500 M (2035)</td><td>6.6%</td><td><span class="tag t-red">Rejected</span> segments by propylene/butylene glycol</td><td><a class="src" href="https://www.wiseguyreports.com/reports/spiroglycol-market">[29]</a></td></tr>
+        <tr style="font-weight:700"><td class="k">Market Intelligence view</td><td>~US$100–130 M (2025)</td><td>~US$190–240 M (2035)</td><td>5.7–7.2%</td><td colspan="2">Weighted to [26] &amp; [27]; implied volume ~8–22 kt/y at an estimated US$6–12/kg (unverified)</td></tr>
+      </tbody>
+    </table></div>
+    <div class="two">
+      <div>
+        <h4>Demand regions</h4>
+        <ul class="tight small">
+          <li>Asia-Pacific dominant: 58.2% of 2025 revenue per <a class="src" href="https://pmarketresearch.com/?p=2630234">[26]</a> (38.5% per <a class="src" href="https://dataintelo.com/report/global-spiroglycol-market">[25]</a>) — Japan, China, Korea, Taiwan.</li>
+          <li>Asia-Pacific is described as both the leading consumer and major producer region <a class="src" href="https://www.transparencymarketresearch.com/spiroglycol-market.html">[24]</a>.</li>
+          <li>Europe &amp; North America: antioxidant, coatings and copolyester demand.</li>
+          <li>High-purity grade ≈78.8% of 2025 value <a class="src" href="https://pmarketresearch.com/?p=2630234">[26]</a>.</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Growth drivers</h4>
+        <ul class="tight small">
+          <li>Heat-resistant, BPA-free transparent polyesters (copolyester CAGR 7.4%) <a class="src" href="https://www.reportprime.com/copolyesters-r204">[30]</a>.</li>
+          <li>Low-birefringence optics for camera modules <a class="src" href="https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/11578168">[62]</a>.</li>
+          <li>High-performance, food-contact antioxidants (7.0% CAGR) <a class="src" href="https://www.giikorea.co.kr/report/qyr1862122-antioxidant-polymer-materials-global-market-share.html">[32]</a>.</li>
+          <li>Low-VOC UV/powder coatings needing higher-Tg building blocks <a class="src" href="https://soar.wichita.edu/items/87be2043-a778-4049-ba15-1230cc66afe8">[20]</a>.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>4B — 🇮🇳 India Market</h3>
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th>Parameter</th><th>Finding</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr class="india"><td class="k">Domestic production</td><td>None identified (no Indian producer in supplier lists or market reports)</td><td><a class="src" href="https://www.chemicalbook.com/CASEN_1455-42-1.htm">[2]</a><a class="src" href="https://www.transparencymarketresearch.com/spiroglycol-market.html">[24]</a></td></tr>
+        <tr class="india"><td class="k">Import dependency</td><td>≈100% (analyst inference). Research grade held in TCI’s Hyderabad stock; bulk from Japan/China.</td><td><a class="src" href="https://tcichemicals.com/IN/en/p/B1158">[4]</a></td></tr>
+        <tr class="india"><td class="k">India market size</td><td>Specific data not publicly available — estimated at <b>US$2–5 M (~200–800 t/y)</b> assuming India = 2–4% of global specialty-polymer/coatings demand. Validate with HS 29329990 shipment data filtered by CAS/name.</td><td>Analyst estimate</td></tr>
+        <tr class="india"><td class="k">Demand drivers</td><td>Specialty polyesters (Ester Industries: 30,000 TPA specialty polymers <a class="src" href="https://nsearchives.nseindia.com/corporate/ESTER_06022025143820_SignedStxpressrelease.pdf">[53]</a>, segment volumes +51% in Q2 FY26 <a class="src" href="https://packagingsouthasia.com/type-of-article/industry-news/ester-industries-q2/">[51]</a>); polymer antioxidants; UV/powder coatings; PVC stabilisers</td><td>—</td></tr>
+        <tr class="india"><td class="k">Consuming clusters</td><td>Gujarat (Vadodara–Ankleshwar–Dahej–Vapi), Maharashtra (Mumbai–Thane–Taloja–Palghar), Uttarakhand (Khatima), Telangana (Hyderabad), NCR (Noida), Tamil Nadu</td><td>Analyst mapping</td></tr>
+        <tr class="india"><td class="k">Feedstock position</td><td>PE: Perstorp 40,000 t/y Gujarat <a class="src" href="https://polymerspaintcolourjournal.com/?p=18199">[40]</a>; IBA US$1.55/kg <a class="src" href="https://www.expertmarketresearch.com/price-forecast/isobutyraldehyde-price-trends">[42]</a>; HPA/NPG absent</td><td>—</td></tr>
+        <tr class="india"><td class="k">Policy relevance</td><td>Import Free, BCD 7.5% <a class="src" href="https://treayo.com/en/hs/india/29329990">[36]</a>; India–Japan CEPA preference possible <a class="src" href="https://taxguru.in/?p=37186">[56]</a>; draft CMSR (“India REACH”) would require notification of substances &gt;1 t/y once notified <a class="src" href="https://chemical.chemlinked.com/chempedia/india-reach-chemicals-management-safety-rules-20xx">[54]</a></td><td>—</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <div class="card">
+    <h3>4C — Manufacturing Countries</h3>
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th>Country</th><th>Role</th><th>Share</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td class="k">🇯🇵 Japan</td><td>Primary producer &amp; captive consumer</td><td><span class="tag t-green">DOMINANT (est.)</span></td><td>MGC produces SPG and DOG polyols and uses SPG in ALTESTER <a class="src" href="https://pr.mono.ipros.com/en/mgc/product/detail/2000462930">[8]</a><a class="src" href="https://pr.mono.ipros.com/en/mgc/product/detail/2000167910">[16]</a>; also AO-80 producers (Sumitomo, ADEKA)</td></tr>
+        <tr><td class="k">🇨🇳 China</td><td>Emerging producer(s) &amp; traders</td><td><span class="tag t-amber">MEDIUM (est.)</span></td><td>Nanyang Tianhua Pharmaceutical cited as a key player <a class="src" href="https://www.transparencymarketresearch.com/spiroglycol-market.html">[24]</a>; NPG overcapacity gives cheap HPA <a class="src" href="https://www.spglobal.com/content/dam/spglobal/ci/en/documents/products/pdf/CI_0325_Global_CEH_Neopentyl_Polyhydric_Alcohols_Abstract.pdf">[43]</a>; capacities undisclosed</td></tr>
+        <tr><td class="k">🇸🇪 Sweden / EU</td><td>Process IP holder</td><td><span class="tag t-grey">LOW / unverified</span></td><td>Perstorp SPG process patent (2015 priority) <a class="src" href="https://data.epo.org/gpi/EP3313848A4">[12]</a>; commercial output not confirmed</td></tr>
+        <tr><td class="k">🇺🇸 USA / 🇪🇺 EU</td><td>Consumers (antioxidants, coatings, copolyesters)</td><td><span class="tag t-grey">Consumer</span></td><td>TSCA-listed; catalogue distribution <a class="src" href="https://www.fishersci.com/shop/products/3-9-bis-1-1-dimethyl-2-hydroxyethyl-2-4-8-10-tetraoxaspiro-5-5-undecane-tci-america-2/B1158500G">[6]</a></td></tr>
+        <tr class="india"><td class="k">🇮🇳 India</td><td>Consumer; feedstock-rich</td><td><span class="tag t-red">NONE</span></td><td>No producer; strong PE &amp; formaldehyde base <a class="src" href="https://www.indiainfoline.com/company/kanoria-chemicals-industries-ltd-share-price-management/summary/743">[37]</a><a class="src" href="https://polymerspaintcolourjournal.com/?p=18199">[40]</a></td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <div class="card">
+    <h3>4D — Global Manufacturers &amp; Suppliers</h3>
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th>Company</th><th>Country</th><th>Role</th><th>Website / source</th></tr></thead>
+      <tbody>
+        <tr><td class="k">Mitsubishi Gas Chemical Co., Inc.</td><td>Japan</td><td>Primary SPG producer; ALTESTER copolyesters</td><td><a href="https://www.mgc.co.jp/products/nc/spiroglycol.html">mgc.co.jp</a> <a class="src" href="https://pr.mono.ipros.com/en/mgc/product/detail/2000431737">[7]</a></td></tr>
+        <tr><td class="k">Nanyang Tianhua Pharmaceutical Co.</td><td>China</td><td>Producer (per market report; website not verified)</td><td><a class="src" href="https://www.transparencymarketresearch.com/spiroglycol-market.html">[24]</a></td></tr>
+        <tr><td class="k">Perstorp AB</td><td>Sweden (plant in India)</td><td>SPG process &amp; acrylate IP; PE (India) and NPG (Zibo, China) producer <a class="src" href="https://www.polymerspaintcolourjournal.com/perstorp-underlines-commitment-to-china/">[64]</a></td><td><a href="https://www.perstorp.com">perstorp.com</a> <a class="src" href="https://data.epo.org/gpi/EP3313848A4">[12]</a></td></tr>
+        <tr><td class="k">Tokyo Chemical Industry (TCI)</td><td>Japan</td><td>Research distributor (B1158, &gt;98%)</td><td><a href="https://www.tcichemicals.com/OF/en/p/B1158">tcichemicals.com</a> <a class="src" href="https://www.tcichemicals.com/OF/en/p/B1158">[3]</a></td></tr>
+        <tr class="india"><td class="k">TCI Chemicals (India) Pvt. Ltd.</td><td>India (Hyderabad)</td><td>Local stockist — same-day dispatch</td><td><a href="https://tcichemicals.com/IN/en/p/B1158">tcichemicals.com/IN</a> <a class="src" href="https://tcichemicals.com/IN/en/p/B1158">[4]</a></td></tr>
+        <tr><td class="k">Thermo Fisher (Alfa Aesar L12958)</td><td>USA</td><td>Research distributor (97%)</td><td><a href="https://www.fishersci.com">fishersci.com</a> <a class="src" href="https://m.chemicalbook.com/price/1455-42-1.htm">[58]</a></td></tr>
+        <tr><td class="k">Ambeed / AK Scientific / AA Blocks</td><td>USA</td><td>Catalogue suppliers (5 g–500 g)</td><td><a class="src" href="https://m.chemicalbook.com/price/1455-42-1.htm">[58]</a></td></tr>
+        <tr><td class="k">Beyond Industries (China) Ltd.</td><td>China</td><td>Trader listed on ChemicalBook</td><td><a class="src" href="https://www.chemicalbook.com/CASEN_1455-42-1.htm">[2]</a></td></tr>
+        <tr class="india"><td class="k">Clearsynth</td><td>India (Mumbai)</td><td>Reference standards of SPG-derived AO-80</td><td><a href="https://clearsynth.com/product/Sumilizer-AG-80">clearsynth.com</a> <a class="src" href="https://clearsynth.com/product/Sumilizer-AG-80">[63]</a></td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</section>
+
+<!-- ======================= 05 ======================= -->
+<section id="s05" class="report-section">
+  <div class="sec-head"><div class="sec-num">05</div><h2>Latest News &amp; Industry Intelligence</h2></div>
+  <div class="alert a-info"><b>Context</b>No SPG-specific capacity announcements surfaced in the last 12 months. Intelligence below covers the dominant producer, feedstocks, Indian demand and trade policy — analysed against the secondary market picture (no trade data in this mode).</div>
+  <div class="card">
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th>Date</th><th>Development</th><th>Implication for SPG</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr><td>31 Mar 2026</td><td><b>MGC to exit polycarbonate at Kashima</b> (120 kt/y) by March 2028; Iupizeta EP optical resin excluded; PC business suffered oversupply-driven price slump</td><td>MGC is pruning commodity lines and protecting differentiated optics — SPG-relevant optical resin survives, but portfolio scrutiny raises supply-security risk for merchant SPG buyers</td><td><a class="src" href="https://chemxplore.com/news/polycarbonate-production-discontinued-kashima-plant">[45]</a></td></tr>
+        <tr><td>13 May 2026</td><td><b>MGC FY2025 results:</b> sales ¥738.2 bn, operating profit ¥45.2 bn, net loss ¥40.3 bn after impairments; FY2026 guidance ¥840 bn sales / ¥59 bn OP with raw-material cost pass-through</td><td>Expect firm SPG pricing; lock annual contracts and price formulae early</td><td><a class="src" href="https://www2.jpx.co.jp/disc/41820/140120260512526003.pdf">[46]</a></td></tr>
+        <tr><td>3 Jul 2026</td><td><b>MGC “Grow UP 2026” final year:</b> discontinuing MXDA in Europe and PC at Kashima; reforms yielded ¥15 bn FY2025 earnings improvement; specialty chemicals to drive profit</td><td>Specialty polyols (SPG/DOG) sit in the “keep &amp; grow” camp, but dual-sourcing from China is prudent</td><td><a class="src" href="https://quartr.com/events/mitsubishi-gas-chemical-company-inc-4182-investor-presentation_FRFdhhGK">[47]</a></td></tr>
+        <tr><td>2025 (CEH)</td><td><b>China NPG capacity oversupplied;</b> isobutyraldehyde availability a constraint; India named a growth market for neopentyl polyols</td><td>Cheap Chinese HPA → potential low-cost Chinese SPG; a second source to benchmark MGC</td><td><a class="src" href="https://www.spglobal.com/content/dam/spglobal/ci/en/documents/products/pdf/CI_0325_Global_CEH_Neopentyl_Polyhydric_Alcohols_Abstract.pdf">[43]</a></td></tr>
+        <tr class="india"><td>Q2 2026</td><td><b>India isobutyraldehyde +5.4% to US$1.55/kg</b> on NPG-intermediate demand; still lowest of four regions tracked</td><td>Feedstock for an Indian HPA/SPG route is available and competitively priced</td><td><a class="src" href="https://www.expertmarketresearch.com/price-forecast/isobutyraldehyde-price-trends">[42]</a></td></tr>
+        <tr class="india"><td>2026</td><td><b>Kanoria Chemicals expanded pentaerythritol and resin capacity</b></td><td>PE supply (spiro core) secure domestically</td><td><a class="src" href="https://www.indiainfoline.com/company/kanoria-chemicals-industries-ltd-share-price-management/summary/743">[37]</a></td></tr>
+        <tr class="india"><td>Nov 2025 – Aug 2026</td><td><b>Ester Industries:</b> specialty polymer revenue +39%, volume +51% (Q2 FY26); FY26 income ₹1,392.7 cr; Q1 FY27 total income ₹441.9 cr (+27%); BOPET margins helped by Chinese price rises and rupee depreciation</td><td>India’s specialty-polyester demand is rising — the most direct domestic pull for SPG as a Tg/heat-resistance modifier</td><td><a class="src" href="https://packagingsouthasia.com/type-of-article/industry-news/ester-industries-q2/">[51]</a><a class="src" href="https://packagingsouthasia.com/?p=114410">[68]</a><a class="src" href="https://packagingsouthasia.com/?p=116629">[52]</a></td></tr>
+        <tr class="india"><td>Feb – Sep 2026</td><td><b>US tariffs on India:</b> interim deal set 18% reciprocal on organic chemicals (Feb); US Supreme Court struck down reciprocal tariffs (20 Feb); 10% global surcharge to 24 Jul; Section 301 10% on most Indian exports reported in Sep 2026</td><td>Export of Indian SPG derivatives to the US faces moderate but volatile tariffs — price US offers with tariff clauses</td><td><a class="src" href="https://kpmg.com/us/en/taxnewsflash/news/2026/02/united-states-removes-tariffs-imports-india.html">[48]</a><a class="src" href="https://www.dtnext.in/news/business/us-tariffs-on-indian-goods-a-chronology-2">[49]</a></td></tr>
+        <tr><td>Sep 2025</td><td><b>US–Japan agreement:</b> 15% baseline tariff on nearly all Japanese imports, retroactive to 7 Aug 2025</td><td>Japanese SPG/derivatives costlier in the US; legal basis later affected by the Feb 2026 ruling — status to verify</td><td><a class="src" href="https://globaltaxnews.ey.com/news/2025-1803">[50]</a></td></tr>
+        <tr><td>2025 – May 2026</td><td><b>Market-research releases</b> with irreconcilable base values (US$44 M → US$1.3 B)</td><td>Third-party sizing unusable on its own — management must commission bottom-up validation</td><td><a class="src" href="https://dataintelo.com/report/global-spiroglycol-market">[25]</a><a class="src" href="https://markwideresearch.com/spiroglycol-market">[28]</a><a class="src" href="https://www.wiseguyreports.com/reports/spiroglycol-market">[29]</a></td></tr>
+      </tbody>
+    </table></div>
+    <div class="alert a-warn"><b>Emerging tech / substitutes to watch</b>MGC’s own dispiro diols target higher thermal stability than SPG <a class="src" href="https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/10633391">[18]</a>; dioxane glycol (DOG) competes in UV/PU flexibility applications <a class="src" href="https://pr.mono.ipros.com/en/mgc/product/detail/2000462930">[8]</a>; CHDM-based PETG dominates commodity copolyester <a class="src" href="https://www.reportprime.com/polyethylene-terephthalate-glycol-petg-r525.md">[31]</a>.</div>
+  </div>
+</section>
+
+<!-- ======================= 06 ======================= -->
+<section id="s06" class="report-section">
+  <div class="sec-head"><div class="sec-num">06</div><h2>Pricing Intelligence</h2></div>
+  <div class="alert a-warn"><b>Data availability</b>Only catalogue (gram–500 g) prices are public. Bulk contract prices are not published; the MT range below is an analyst cost-build estimate and must be replaced by RFQs. FX used: ~₹95/US$ (Aug–Sep 2026) <a class="src" href="https://www.ofx.com/en-us/exchange-rates/inr/">[60]</a>.</div>
+  <div class="card">
+    <h3>Price by Quantity Scale</h3>
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th>Scale</th><th>Price (USD)</th><th>INR equivalent</th><th>Grade</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr><td class="k">Small — 5 g</td><td>$8 (AA Blocks) – $11 (Ambeed) → $1.6–2.2/g</td><td>₹152–209/g</td><td>95–98%</td><td><a class="src" href="https://m.chemicalbook.com/price/1455-42-1.htm">[58]</a></td></tr>
+        <tr><td class="k">Small — 25 g</td><td>$24.70 (Alfa Aesar 97%) – $38 (TCI) → $1.0–1.5/g</td><td>₹94–144/g</td><td>97–98%</td><td><a class="src" href="https://m.chemicalbook.com/price/1455-42-1.htm">[58]</a><a class="src" href="https://www.tcichemicals.com/OF/en/p/B1158">[3]</a></td></tr>
+        <tr class="india"><td class="k">Small — 25 g (India)</td><td>≈$31.6</td><td>₹3,000 (₹120/g), ex-tax, Hyderabad stock</td><td>&gt;98% GC</td><td><a class="src" href="https://tcichemicals.com/IN/en/p/B1158">[4]</a></td></tr>
+        <tr><td class="k">Medium — 100 g</td><td>$42 (AA Blocks) – $88 (Ambeed); AK Sci $67</td><td>₹3,990–8,360</td><td>95–98%</td><td><a class="src" href="https://m.chemicalbook.com/price/1455-42-1.htm">[58]</a></td></tr>
+        <tr><td class="k">Medium — 500 g</td><td>$103 (AA Blocks) – $219 (AK Sci); TCI $152; Fisher $170 → $206–438/kg</td><td>₹19,600–41,600/kg</td><td>95–98%</td><td><a class="src" href="https://m.chemicalbook.com/price/1455-42-1.htm">[58]</a><a class="src" href="https://www.tcichemicals.com/OF/en/p/B1158">[3]</a><a class="src" href="https://www.fishersci.com/shop/products/3-9-bis-1-1-dimethyl-2-hydroxyethyl-2-4-8-10-tetraoxaspiro-5-5-undecane-tci-america-2/B1158500G">[6]</a></td></tr>
+        <tr class="india"><td class="k">Medium — 500 g (India)</td><td>≈$141/kg</td><td>₹6,700 → ₹13,400/kg</td><td>&gt;98% GC</td><td><a class="src" href="https://tcichemicals.com/IN/en/p/B1158">[4]</a></td></tr>
+        <tr><td class="k">Medium — 500 g (Japan)</td><td>¥16,700</td><td>—</td><td>&gt;98% GC</td><td><a class="src" href="https://www.tcichemicals.com/JP/en/p/B1158">[5]</a></td></tr>
+        <tr><td class="k">Large — 10 kg to MT (bulk)</td><td><b>Not publicly available — est. US$6–12/kg (US$6,000–12,000/MT)</b></td><td>₹570–1,140/kg (₹5.7–11.4 lakh/MT)</td><td>≥99% industrial</td><td>Proxy method below</td></tr>
+        <tr><td class="k">Outlier (excluded)</td><td>$1,112.82/25 g (American Custom Chemicals)</td><td>—</td><td>—</td><td><a class="src" href="https://m.chemicalbook.com/price/1455-42-1.htm">[58]</a></td></tr>
+      </tbody>
+    </table></div>
+    <div class="alert a-info"><b>Bulk proxy method</b>Analogue: China NPG traded at RMB 12,500–17,700/t (≈US$1.8–2.5/kg) in 2022 <a class="src" href="https://www.sunsirs.com/uk/detail_news-7821.html">[44]</a>; IBA in India US$1.55/kg <a class="src" href="https://www.expertmarketresearch.com/price-forecast/isobutyraldehyde-price-trends">[42]</a>. SPG needs 2 mol HPA + 1 mol PE, loses 10–30% yield in conventional processes and carries ≥10× waste-water treatment <a class="src" href="https://patents.google.com/patent/EP1598357B1/en">[10]</a>, plus a specialty/single-supplier premium. Result: ~2.5–5× NPG → US$6–12/kg. Research-pack prices (US$141–438/kg) are 15–40× this — consistent with typical catalogue mark-ups.</div>
+  </div>
+
+  <div class="card">
+    <h3>Price Trend &amp; India Cost Factors</h3>
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th>Factor</th><th>Assessment</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr><td class="k">Trend direction</td><td><span class="tag t-amber">STABLE → FIRM</span></td><td>—</td></tr>
+        <tr><td class="k">Drivers</td><td>MGC cost pass-through policy for FY2026 <a class="src" href="https://www2.jpx.co.jp/disc/41820/140120260512526003.pdf">[46]</a>; IBA +5.4% q/q <a class="src" href="https://www.expertmarketresearch.com/price-forecast/isobutyraldehyde-price-trends">[42]</a>; concentrated supply. Cap: Chinese NPG oversupply <a class="src" href="https://www.spglobal.com/content/dam/spglobal/ci/en/documents/products/pdf/CI_0325_Global_CEH_Neopentyl_Polyhydric_Alcohols_Abstract.pdf">[43]</a></td><td>—</td></tr>
+        <tr class="india"><td class="k">🇮🇳 India import additions</td><td>BCD 7.5% + SWS 0.75% (10% of BCD) + IGST 18% on duty-paid value = 27.735% gross; IGST creditable → <b>~8.25% non-creditable duty</b>. Example: CIF US$8.00/kg → +$0.60 BCD +$0.06 SWS = $8.66 (+$1.56 IGST, recoverable)</td><td><a class="src" href="https://treayo.com/en/hs/india/29329990">[36]</a></td></tr>
+        <tr class="india"><td class="k">🇮🇳 Logistics</td><td>Ambient, dry, non-DG ocean freight (Japan/China → Nhava Sheva/Mundra); no cold chain. Moisture-barrier packaging and inert-gas handling for polymer grade</td><td><a class="src" href="https://www.tcichemicals.com/OF/en/p/B1158">[3]</a><a class="src" href="https://data.epo.org/publication-server/rest/v1.2/patents/EP4245788NWA1/document.html">[15]</a></td></tr>
+        <tr class="india"><td class="k">🇮🇳 Currency risk</td><td>JPY- or USD-denominated purchases vs INR sales; INR ≈₹95/US$ in Aug–Sep 2026; hedge forward for contracts &gt;3 months</td><td><a class="src" href="https://www.ofx.com/en-us/exchange-rates/inr/">[60]</a></td></tr>
+        <tr class="india"><td class="k">🇮🇳 Duty mitigation</td><td>India–Japan CEPA certificate of origin for MGC material (verify line); Advance Authorisation if used in export production</td><td><a class="src" href="https://taxguru.in/?p=37186">[56]</a></td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</section>
+
+<!-- ======================= 07 ======================= -->
+<section id="s07" class="report-section">
+  <div class="sec-head"><div class="sec-num">07</div><h2>Regulatory, Licensing &amp; Compliance</h2></div>
+  <div class="card">
+    <h3>Global Regulatory Overview</h3>
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th>Country / Region</th><th>Body</th><th>Classification</th><th>Licence / permit</th><th>Certification</th><th>Key restrictions</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr class="india"><td class="k">🇮🇳 India</td><td>DGFT / CBIC / MoEFCC / CPCB</td><td>Non-hazardous (indicative)</td><td>Import Free (ITC-HS 29329990); IEC required</td><td>None (no BIS QCO identified)</td><td>Draft CMSR notification once in force</td><td><a class="src" href="https://treayo.com/en/hs/india/29329990">[36]</a><a class="src" href="https://www.chemsafetypro.com/Topics/India/Indian_Chemicals_Management_Safety_Rules_India_REACH.html">[55]</a></td></tr>
+        <tr><td class="k">🇺🇸 USA</td><td>EPA (TSCA)</td><td>Listed on TSCA Inventory <a class="src" href="https://www.epa.gov/tsca-inventory">[61]</a></td><td>None for import of listed substance</td><td>TSCA import certification</td><td>CDR reporting if ≥25,000 lb/site/yr</td><td><a class="src" href="https://www.fishersci.com/shop/products/3-9-bis-1-1-dimethyl-2-hydroxyethyl-2-4-8-10-tetraoxaspiro-5-5-undecane-tci-america-2/B1158500G">[6]</a><a class="src" href="https://www.chemradar.com/service/detail/ecsu9bnz8ykg">[69]</a></td></tr>
+        <tr><td class="k">🇪🇺 EU</td><td>ECHA (REACH / CLP)</td><td>EC 485-230-3; no harmonised classification found; not found on SVHC list</td><td>REACH registration for ≥1 t/y per legal entity (or via Only Representative)</td><td>SDS (REACH Annex II)</td><td>Importer must check existing registrant/dossier coverage</td><td><a class="src" href="https://www.chemicalbook.com/CASEN_1455-42-1.htm">[2]</a><a class="src" href="https://markwideresearch.com/spiroglycol-market">[28]</a></td></tr>
+        <tr><td class="k">🇨🇳 China</td><td>MEE (IECSC)</td><td>IECSC listing not verified</td><td>If not listed: MEE Order 12 new-substance registration</td><td>—</td><td>MFN duty 4% on 2932.99 line</td><td><a class="src" href="https://treayo.com/en/hs/india/29329990">[36]</a></td></tr>
+        <tr><td class="k">🇯🇵 Japan</td><td>METI / MHLW / MOE (CSCL)</td><td>Existing substance ENCS 5-5567</td><td>None</td><td>—</td><td>MFN duty 4.6%</td><td><a class="src" href="https://www.tcichemicals.com/JP/en/p/B1158">[5]</a><a class="src" href="https://treayo.com/en/hs/india/29329990">[36]</a></td></tr>
+        <tr><td class="k">🇰🇷 Korea</td><td>MoE (K-REACH)</td><td>Status not verified</td><td>Pre-registration check required</td><td>—</td><td>MFN duty 8%</td><td><a class="src" href="https://treayo.com/en/hs/india/29329990">[36]</a></td></tr>
+        <tr><td class="k">Food contact (derivative)</td><td>US FDA / EU DG SANTE</td><td>AO-80 (SPG ester) has FCN 906 and EU FCM listing</td><td>—</td><td>—</td><td>Supports antioxidant-route demand</td><td><a class="src" href="https://www.thegoodscentscompany.com/data/rw1642951.html">[22]</a></td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <div class="card">
+    <h3>🇮🇳 India — Detailed Requirements</h3>
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th>Requirement</th><th>Status / action</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr class="india"><td class="k">Manufacturing licence</td><td>Prior Environmental Clearance under EIA Notification 2006, item 5(f) “Synthetic organic chemicals industry” (Category A, or B1/B for units in notified industrial estates); State PCB Consent to Establish/Operate; Factory licence. Synthetic organic chemicals are CPCB “Red” category.</td><td><a class="src" href="https://www.greentribunal.gov.in/sites/default/files/news_updates/8820.pdf">[70]</a><a class="src" href="https://dste.py.gov.in/SEIAA/pdf/OM/C76.pdf">[71]</a><a class="src" href="https://www.galaxysurfactants.com/pdf/sustainability/environment-compliance/environment-clearance/2022/GSL-Jhagadia-EC-compliance-report.pdf">[72]</a></td></tr>
+        <tr class="india"><td class="k">Import permission</td><td>Free — no licence; IEC + Bill of Entry; BCD 7.5%, SWS 0.75%, IGST 18%; CEPA CoO for Japan origin</td><td><a class="src" href="https://treayo.com/en/hs/india/29329990">[36]</a><a class="src" href="https://taxguru.in/?p=37186">[56]</a></td></tr>
+        <tr class="india"><td class="k">Export permission</td><td>Free. SCOMET: not identified as a controlled item (not a CWC-scheduled chemical) — re-confirm against DGFT Appendix 3 at time of shipment</td><td><a class="src" href="https://treayo.com/en/hs/india/29329990">[36]</a></td></tr>
+        <tr class="india"><td class="k">Storage &amp; handling</td><td>Non-hazardous solid; store cool, dry, dark; dust control; inert-gas/≤0.1% moisture for polymer customers. MSIHC Rules unlikely to apply (no hazard classification) — confirm via SDS</td><td><a class="src" href="https://www.tcichemicals.com/OF/en/p/B1158">[3]</a><a class="src" href="https://data.epo.org/publication-server/rest/v1.2/patents/EP4245788NWA1/document.html">[15]</a></td></tr>
+        <tr class="india"><td class="k">Pharma supply (CDSCO / Schedule M)</td><td>Not applicable — SPG is not an API or pharmacopoeial excipient; no CDSCO licence required</td><td>Analyst assessment</td></tr>
+        <tr class="india"><td class="k">Upcoming: CMSR (“India REACH”)</td><td>Draft rules: notification of all substances &gt;1 t/y during an initial window; priority substances need registration. Still in draft — monitor</td><td><a class="src" href="https://chemical.chemlinked.com/chempedia/india-reach-chemicals-management-safety-rules-20xx">[54]</a><a class="src" href="https://www.chemsafetypro.com/Topics/India/Indian_Chemicals_Management_Safety_Rules_India_REACH.html">[55]</a></td></tr>
+      </tbody>
+    </table></div>
+    <div class="alert a-success"><b>Plain-language summary for India</b>SPG can be imported, stocked and sold in India today without any special licence — it is a freely importable, non-hazardous organic chemical attracting 7.5% basic duty. Exports are also free. Only local manufacturing triggers heavy approvals (Environmental Clearance under item 5(f), PCB consents, Red-category effluent controls). Keep an eye on the CMSR draft, which would add a one-time notification once enacted.</div>
+  </div>
+</section>
+
+<!-- ======================= 08 ======================= -->
+<section id="s08" class="report-section">
+  <div class="sec-head"><div class="sec-num">08</div><h2>Potential Customers &amp; Target Companies</h2></div>
+  <div class="card">
+    <h3>8A — 🇮🇳 Indian Target Companies</h3>
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th>Company</th><th>Segment</th><th>Location</th><th>Why a target</th><th>Website</th></tr></thead>
+      <tbody>
+        <tr class="india"><td class="k">Ester Industries Ltd</td><td>Specialty polyester chips, BOPET films</td><td>Khatima, Uttarakhand; Hyderabad</td><td>30,000 TPA specialty polymers <a class="src" href="https://nsearchives.nseindia.com/corporate/ESTER_06022025143820_SignedStxpressrelease.pdf">[53]</a>; segment volume +51% <a class="src" href="https://packagingsouthasia.com/type-of-article/industry-news/ester-industries-q2/">[51]</a> — prime candidate for SPG-modified high-Tg PET</td><td><a href="https://www.esterindustries.com">esterindustries.com</a></td></tr>
+        <tr class="india"><td class="k">Reliance Industries Ltd</td><td>PET resin &amp; polyester (largest in India)</td><td>Jamnagar, Hazira, Patalganga</td><td>Scale to launch specialty copolyester / heat-set PET grades</td><td><a href="https://www.ril.com">ril.com</a></td></tr>
+        <tr class="india"><td class="k">Polyplex Corporation</td><td>BOPET/specialty films</td><td>Noida; Khatima &amp; Bazpur (UK)</td><td>Heat-resistant &amp; optical film grades need Tg uplift</td><td><a href="https://www.polyplex.com">polyplex.com</a></td></tr>
+        <tr class="india"><td class="k">Garware Hi-Tech Films</td><td>Specialty PET films (sun-control, PPF)</td><td>Chh. Sambhajinagar (Aurangabad)</td><td>Optical-clarity, weatherable film formulations</td><td><a href="https://www.garwarehitechfilms.com">garwarehitechfilms.com</a></td></tr>
+        <tr class="india"><td class="k">SRF Ltd</td><td>Packaging films + specialty chemicals</td><td>Gurugram; Dahej</td><td>BOPET + in-house chemicals R&amp;D for polymer intermediates</td><td><a href="https://www.srf.com">srf.com</a></td></tr>
+        <tr class="india"><td class="k">UFlex Ltd</td><td>PET chips &amp; films</td><td>Noida; Sanand</td><td>Specialty PET resin development</td><td><a href="https://www.uflexltd.com">uflexltd.com</a></td></tr>
+        <tr class="india"><td class="k">Vinati Organics Ltd</td><td>Butylated phenols &amp; antioxidants</td><td>Mahad / Lote, Maharashtra</td><td>Owns the hindered-phenol chain — could produce AO-80-type SPG esters locally (SPG ≈41% of molecule)</td><td><a href="https://www.vinatiorganics.com">vinatiorganics.com</a></td></tr>
+        <tr class="india"><td class="k">SI Group India</td><td>Polymer antioxidants</td><td>Navi Mumbai, Maharashtra</td><td>Phenolic antioxidant formulator/producer</td><td><a href="https://www.siigroup.com">siigroup.com</a></td></tr>
+        <tr class="india"><td class="k">Clariant Chemicals (India)</td><td>Plastic additives</td><td>Navi Mumbai; Roha</td><td>Stabiliser blends for polyolefins/engineering plastics</td><td><a href="https://www.clariant.com">clariant.com</a></td></tr>
+        <tr class="india"><td class="k">Baerlocher India Additives</td><td>PVC stabilisers</td><td>Mumbai, Maharashtra</td><td>PVC stabilisers are a listed SPG use <a class="src" href="https://pr.mono.ipros.com/en/mgc/product/detail/2000431737">[7]</a></td><td><a href="https://www.baerlocher.com">baerlocher.com</a></td></tr>
+        <tr class="india"><td class="k">allnex India</td><td>UV-curable &amp; powder-coating resins</td><td>Navi Mumbai, Maharashtra</td><td>High-Tg acrylate/polyester resin building block</td><td><a href="https://www.allnex.com">allnex.com</a></td></tr>
+        <tr class="india"><td class="k">Asian Paints Ltd</td><td>Coatings (incl. industrial/powder) + PE producer</td><td>Mumbai; Cuddalore (PE)</td><td>Dual role: SPG end-user and potential PE feedstock partner <a class="src" href="https://penta.asianpaints.com/penta/About_us.aspx">[38]</a></td><td><a href="https://www.asianpaints.com">asianpaints.com</a></td></tr>
+        <tr class="india"><td class="k">Pidilite Industries</td><td>Adhesives, PU &amp; UV systems</td><td>Mumbai; Vapi</td><td>PU chain extender &amp; UV adhesive development</td><td><a href="https://www.pidilite.com">pidilite.com</a></td></tr>
+        <tr class="india"><td class="k">Perstorp Industries India</td><td>Pentaerythritol &amp; polyols</td><td>Sayakha, Bharuch, Gujarat</td><td>Strategic partner (PE supply + SPG IP) rather than buyer <a class="src" href="https://data.epo.org/gpi/EP3313848A4">[12]</a><a class="src" href="https://polymerspaintcolourjournal.com/?p=18199">[40]</a></td><td><a href="https://www.perstorp.com">perstorp.com</a></td></tr>
+      </tbody>
+    </table></div>
+  </div>
+  <div class="card">
+    <h3>8B — Global Target Companies</h3>
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th>Company</th><th>Country</th><th>Segment</th><th>Why a target</th></tr></thead>
+      <tbody>
+        <tr><td class="k">Sumitomo Chemical</td><td>Japan</td><td>Antioxidants (Sumilizer GA-80)</td><td>SPG-based antioxidant producer <a class="src" href="https://www.thegoodscentscompany.com/data/rw1642951.html">[22]</a> — second-source / toll-esterification opportunity</td></tr>
+        <tr><td class="k">ADEKA Corporation</td><td>Japan</td><td>Polymer additives (ADK STAB AO-80)</td><td>Same SPG ester chemistry; Asia-wide demand</td></tr>
+        <tr><td class="k">Teijin Ltd</td><td>Japan</td><td>Optical polycarbonate</td><td>SPG copolycarbonate patents (low photoelastic constant) <a class="src" href="https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/8816039">[14]</a></td></tr>
+        <tr><td class="k">Eastman Chemical</td><td>USA</td><td>Copolyesters</td><td>Global copolyester leader; specialty diol evaluations</td></tr>
+        <tr><td class="k">SK Chemicals</td><td>South Korea</td><td>Copolyesters (PETG/PCTG)</td><td>Heat-resistant transparent copolyester extensions <a class="src" href="https://www.marketresearchintellect.com/product/copolyester-market/">[27]</a></td></tr>
+        <tr><td class="k">Indorama Ventures</td><td>Thailand</td><td>PET &amp; specialty polyester</td><td>Large specialty PET footprint incl. India operations</td></tr>
+        <tr><td class="k">Songwon Industrial</td><td>South Korea</td><td>Polymer stabilisers</td><td>Antioxidant portfolio expansion</td></tr>
+        <tr><td class="k">BASF</td><td>Germany</td><td>Antioxidants, UV resins, NPG</td><td>Stabiliser &amp; coatings resin innovation</td></tr>
+        <tr><td class="k">Arkema (Sartomer)</td><td>France</td><td>Specialty acrylate monomers</td><td>Candidate for SPG di(meth)acrylate monomers <a class="src" href="https://patents.justia.com/patent/9388194">[19]</a></td></tr>
+        <tr><td class="k">allnex</td><td>Germany</td><td>Radiation-cure &amp; powder resins</td><td>High-Tg UV/powder polyester building block <a class="src" href="https://soar.wichita.edu/items/87be2043-a778-4049-ba15-1230cc66afe8">[20]</a></td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</section>
+
+<!-- ======================= 09 ======================= -->
+<section id="s09" class="report-section">
+  <div class="sec-head"><div class="sec-num">09</div><h2>Strategic Business Frameworks</h2></div>
+
+  <div class="card">
+    <h3>9A — SWOT (our company entering SPG)</h3>
+    <div class="swot">
+      <div class="sq s-s"><h4>STRENGTHS</h4><ul>
+        <li>Multi-mode model (trade + CRO + manufacturing) lets us start asset-light and scale.</li>
+        <li>CRO lab can certify polymer-critical specs (N ppm, aldehyde ppm, moisture, melt colour) — a differentiator vs pure traders.</li>
+        <li>Non-hazardous, ambient logistics → low working-capital risk.</li>
+        <li>India-side access to PE and formaldehyde suppliers.</li>
+      </ul></div>
+      <div class="sq s-w"><h4>WEAKNESSES</h4><ul>
+        <li>No SPG process know-how or HPA source.</li>
+        <li>Weak buying power vs a dominant producer (MGC).</li>
+        <li>Small, unvalidated Indian demand base.</li>
+        <li>Long customer qualification cycles (6–18 months for polymer grades).</li>
+      </ul></div>
+      <div class="sq s-o"><h4>OPPORTUNITIES</h4><ul>
+        <li>Zero domestic producers → first-mover distributor position.</li>
+        <li>Indian specialty polyester growth (Ester +51% volumes).</li>
+        <li>Localise AO-80-type antioxidant via CRO/toll partners.</li>
+        <li>China as second source to benchmark Japanese pricing.</li>
+        <li>Perstorp/Kanoria partnership for a future HPA→SPG unit.</li>
+        <li>Re-export to SE Asia/Middle East converters.</li>
+      </ul></div>
+      <div class="sq s-t"><h4>THREATS</h4><ul>
+        <li>MGC restructuring could tighten merchant supply.</li>
+        <li>Substitutes: CHDM/PETG, DOG, dispiro diols, NPG.</li>
+        <li>Direct sales by MGC/Chinese producers to large accounts.</li>
+        <li>Tariff volatility (US) and JPY/USD/INR swings.</li>
+        <li>Unreliable market data → demand over-estimation.</li>
+      </ul></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>9B — Porter’s Five Forces</h3>
+    <div class="porter">
+      <div class="pf pf-l"><h4>Competitive Rivalry</h4><span class="tag t-green">LOW–MEDIUM</span><p>Very few producers; competition is on purity/consistency rather than price.</p></div>
+      <div class="pf pf-m"><h4>Threat of New Entrants</h4><span class="tag t-amber">MEDIUM</span><p>Chemistry is published and key EP patent shown expired, but HPA access and purity know-how are real barriers.</p></div>
+      <div class="pf pf-h"><h4>Supplier Power</h4><span class="tag t-red">HIGH</span><p>One dominant Japanese producer; HPA captive inside NPG plants.</p></div>
+      <div class="pf pf-m"><h4>Buyer Power</h4><span class="tag t-amber">MEDIUM</span><p>Few, large, technically demanding buyers; once qualified, switching costs are high.</p></div>
+      <div class="pf pf-m"><h4>Threat of Substitutes</h4><span class="tag t-amber">MEDIUM–HIGH</span><p>CHDM, TMCD, NPG, DOG cover many uses; SPG wins where Tg + transparency + low birefringence are all needed.</p></div>
+      <div class="pf pf-o"><h4>Overall Attractiveness</h4><span class="tag t-blue">MODERATE</span><p>Attractive as a high-margin niche trade &amp; technical-service play; unattractive as a stand-alone volume manufacturing bet today.</p></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>9C — BCG Positioning of SPG Business Modes</h3>
+    <div class="bcg">
+      <div class="bq b-star"><h4>⭐ Stars (high growth / high share)</h4><p>None today. Target: <b>Import trading + technical service</b> can move here within 2–3 years if we become the default Indian channel.</p></div>
+      <div class="bq b-q"><h4>❓ Question Marks (high growth / low share)</h4><p><b>Import &amp; domestic trading</b>, <b>sourcing &amp; marketing</b>, <b>CRO derivatives</b> (acrylates, AO esters) — fund selectively.</p></div>
+      <div class="bq b-cow"><h4>🐄 Cash Cows (low growth / high share)</h4><p>Not applicable — no existing SPG position.</p></div>
+      <div class="bq b-dog"><h4>🐕 Dogs (low growth / low share)</h4><p><b>Stand-alone manufacturing</b> at Indian demand of ~200–800 t/y — avoid until volumes and HPA are secured.</p></div>
+    </div>
+    <div class="bcg-axis">Vertical: market growth (SPG ~6–7% CAGR) · Horizontal: our relative share (currently nil)</div>
+  </div>
+
+  <div class="card">
+    <h3>9D — Value Chain</h3>
+    <div class="vchain">
+      <div class="vstep v-part">Raw Material<small>PE local; HPA absent</small></div><div class="varrow">→</div>
+      <div class="vstep v-off">Synthesis<small>Phase 3 option</small></div><div class="varrow">→</div>
+      <div class="vstep v-on">Sourcing / Import<small>Phase 1</small></div><div class="varrow">→</div>
+      <div class="vstep v-on">Quality Testing<small>CRO lab</small></div><div class="varrow">→</div>
+      <div class="vstep v-on">Distribution<small>Gujarat/Maharashtra stock</small></div><div class="varrow">→</div>
+      <div class="vstep v-part">Export<small>Phase 2</small></div><div class="varrow">→</div>
+      <div class="vstep v-on">End Customer<small>Tech service</small></div>
+    </div>
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th>Stage</th><th>Our participation</th><th>Opportunity</th><th>Timeline</th></tr></thead>
+      <tbody>
+        <tr class="india"><td class="k">Raw material</td><td><span class="tag t-amber">Partial</span></td><td>Line up PE (Kanoria/Perstorp/Asian Paints) and IBA offtake options for future synthesis</td><td>Month 12+</td></tr>
+        <tr><td class="k">Synthesis</td><td><span class="tag t-red">No</span></td><td>Lab-validate one-pot route via CRO; toll/JV evaluation</td><td>Month 12–24</td></tr>
+        <tr><td class="k">Sourcing / import</td><td><span class="tag t-green">Yes</span></td><td>Distribution agreement with MGC; qualify 1–2 Chinese sources</td><td>Month 1–6</td></tr>
+        <tr><td class="k">Quality testing</td><td><span class="tag t-green">Yes</span></td><td>In-house CoA: GC purity, N ppm, aldehyde ppm, KF moisture, melt Hazen</td><td>Month 2–3</td></tr>
+        <tr class="india"><td class="k">Distribution</td><td><span class="tag t-green">Yes</span></td><td>Buffer stock 1–2 MT near Vapi/Taloja; 25 kg moisture-barrier packs</td><td>Month 3–6</td></tr>
+        <tr><td class="k">Export</td><td><span class="tag t-amber">Later</span></td><td>Merchant trade to SE Asia/Middle East converters; derivative exports</td><td>Month 9–18</td></tr>
+        <tr><td class="k">End customer</td><td><span class="tag t-green">Yes</span></td><td>Application support for Tg/heat-resistance trials; co-development</td><td>Month 3+</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</section>
+
+<!-- ======================= 10 ======================= -->
+<section id="s10" class="report-section">
+  <div class="sec-head"><div class="sec-num">10</div><h2>Feasibility Summary &amp; Management Recommendation</h2></div>
+
+  <div class="verdict v-cond" style="margin-bottom:14px">
+    <div class="vt">VERDICT</div>
+    <div class="vv">CONDITIONAL — Enter via trading &amp; technical sourcing; defer manufacturing</div>
+    <p>SPG is a genuine, growing (~6–7% CAGR) performance diol with no Indian producer, freely importable at 7.5% basic duty and with no hazard-driven handling costs. Indian demand pull is visible in specialty polyesters, antioxidants and coatings. However, the market is small (~US$100–130 M globally; India est. US$2–5 M), data quality is poor, and supply is concentrated in one Japanese producer that is actively restructuring. The right move is an <b>asset-light entry</b> — become the qualified Indian channel with CRO-backed quality assurance — while building the evidence (volumes, prices, HPA access) for a later manufacturing decision.</p>
+  </div>
+
+  <div class="card">
+    <h3>Business Mode Assessment</h3>
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th>Business mode</th><th>Recommendation</th><th>Rationale</th></tr></thead>
+      <tbody>
+        <tr><td class="k">Import &amp; Domestic Trading</td><td><span class="tag t-green">RECOMMENDED</span></td><td>No domestic competitor; Free import; ambient logistics; research-to-bulk price ladder supports margin</td></tr>
+        <tr><td class="k">Sourcing &amp; Marketing</td><td><span class="tag t-green">RECOMMENDED</span></td><td>Dual-source Japan + China; position as technical distributor to Ester, film makers, antioxidant and coating resin producers</td></tr>
+        <tr><td class="k">CRO / R&amp;D Support</td><td><span class="tag t-amber">CONDITIONAL</span></td><td>Analytical qualification immediately; derivative synthesis (SPG diacrylate, AO-80 analogue, SPG-PET samples) only against customer briefs</td></tr>
+        <tr><td class="k">Export</td><td><span class="tag t-amber">CONDITIONAL</span></td><td>Merchant trade/re-export feasible; Indian-origin derivatives to US face volatile tariffs <a class="src" href="https://www.dtnext.in/news/business/us-tariffs-on-indian-goods-a-chronology-2">[49]</a></td></tr>
+        <tr><td class="k">Manufacturing</td><td><span class="tag t-red">NOT RECOMMENDED (now)</span></td><td>India demand est. 200–800 t/y; HPA unavailable; EC item 5(f) + effluent ≥10× product. Re-evaluate at ≥1,000 t/y secured offtake</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <div class="card">
+    <h3>Key Risks</h3>
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th>Risk</th><th>Level</th><th>Mitigation</th></tr></thead>
+      <tbody>
+        <tr><td class="k">Supply concentration (MGC)</td><td><span class="tag t-red">HIGH</span></td><td>Qualify at least one Chinese source; hold 2–3 months’ buffer stock; annual supply agreement</td></tr>
+        <tr><td class="k">Demand over-estimation (poor market data)</td><td><span class="tag t-red">HIGH</span></td><td>Buy HS 29329990 shipment data filtered by name/CAS; 15 customer interviews before stocking beyond 2 MT</td></tr>
+        <tr><td class="k">Grade / quality failure in polymer trials</td><td><span class="tag t-amber">MEDIUM</span></td><td>CRO incoming QC on N, aldehyde, moisture, colour; supplier CoA alignment</td></tr>
+        <tr><td class="k">Substitution by CHDM / DOG / NPG</td><td><span class="tag t-amber">MEDIUM</span></td><td>Target applications where SPG’s Tg + transparency + low birefringence are uniquely needed</td></tr>
+        <tr><td class="k">Price &amp; FX volatility (JPY/USD/INR)</td><td><span class="tag t-amber">MEDIUM</span></td><td>Indexed pricing; forward cover; INR price lists reviewed quarterly</td></tr>
+        <tr><td class="k">Channel bypass by producers</td><td><span class="tag t-amber">MEDIUM</span></td><td>Seek exclusive/authorised-distributor status; add value via testing and application service</td></tr>
+        <tr><td class="k">Regulatory change (CMSR, tariffs)</td><td><span class="tag t-green">LOW</span></td><td>Track CMSR notification; maintain SDS/CoO files; tariff clauses in export contracts</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <div class="card">
+    <h3>Next Steps</h3>
+    <ol class="steps">
+      <li><b>Bulk RFQs &amp; samples</b><span class="when">Month 1–2</span><br>Request price, MOQ, lead time, grades and CoA specs from MGC and two Chinese producers; obtain SDS and confirm hazard classification.</li>
+      <li><b>Demand validation</b><span class="when">Month 1–2</span><br>Interview ≥15 Indian prospects (Ester, Polyplex, Garware, Vinati, SI Group, allnex, Baerlocher…); purchase HS 29329990 import records to size actual Indian inflows.</li>
+      <li><b>Analytical capability</b><span class="when">Month 2–3</span><br>CRO lab sets up GC purity, trace nitrogen, aldehyde/formyl, KF moisture and 260 °C melt-colour methods to issue our own CoA.</li>
+      <li><b>Distribution launch</b><span class="when">Month 3–6</span><br>Sign distribution terms; stock 1–2 MT in Gujarat/Maharashtra; run a sampling programme with 5 priority accounts.</li>
+      <li><b>Derivative &amp; co-development</b><span class="when">Month 6–12</span><br>CRO projects on SPG diacrylate and AO-80-type esters with one antioxidant and one coatings partner; evaluate export of derivatives.</li>
+      <li><b>Manufacturing go/no-go</b><span class="when">Month 12–24</span><br>If secured offtake ≥1,000 t/y: feasibility of one-pot IBA + formaldehyde + PE route, partner screening (Perstorp, Kanoria), EC 5(f) pathway and effluent design.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ======================= REFERENCES ======================= -->
+<section id="refs" class="report-section">
+  <div class="sec-head"><div class="sec-num">SR</div><h2>Sources &amp; References</h2></div>
+  <div class="card">
+    <ol class="refs">
+      <li>PubChem — CID 7569008, NCBI. <a href="https://pubchem.ncbi.nlm.nih.gov/compound/7569008">https://pubchem.ncbi.nlm.nih.gov/compound/7569008</a></li>
+      <li>ChemicalBook — CAS 1455-42-1 database entry. <a href="https://www.chemicalbook.com/CASEN_1455-42-1.htm">https://www.chemicalbook.com/CASEN_1455-42-1.htm</a></li>
+      <li>TCI — Product B1158 (global). <a href="https://www.tcichemicals.com/OF/en/p/B1158">https://www.tcichemicals.com/OF/en/p/B1158</a></li>
+      <li>TCI India — Product B1158 (INR pricing, Hyderabad stock). <a href="https://tcichemicals.com/IN/en/p/B1158">https://tcichemicals.com/IN/en/p/B1158</a></li>
+      <li>TCI Japan — Product B1158 (ENCS 5-5567). <a href="https://www.tcichemicals.com/JP/en/p/B1158">https://www.tcichemicals.com/JP/en/p/B1158</a></li>
+      <li>Fisher Scientific — TCI B1158 (IUPAC, InChIKey, SMILES, TSCA). <a href="https://www.fishersci.com/shop/products/3-9-bis-1-1-dimethyl-2-hydroxyethyl-2-4-8-10-tetraoxaspiro-5-5-undecane-tci-america-2/B1158500G">https://www.fishersci.com/shop/products/3-9-bis-1-1-dimethyl-2-hydroxyethyl-2-4-8-10-tetraoxaspiro-5-5-undecane-tci-america-2/B1158500G</a></li>
+      <li>Mitsubishi Gas Chemical — “SPG (Spiroglycol)” product sheet, IPROS. <a href="https://pr.mono.ipros.com/en/mgc/product/detail/2000431737">https://pr.mono.ipros.com/en/mgc/product/detail/2000431737</a></li>
+      <li>Mitsubishi Gas Chemical — High-performance polyols SPG &amp; DOG, IPROS. <a href="https://pr.mono.ipros.com/en/mgc/product/detail/2000462930">https://pr.mono.ipros.com/en/mgc/product/detail/2000462930</a></li>
+      <li>Mitsubishi Gas Chemical — Spiroglycol product page. <a href="https://www.mgc.co.jp/products/nc/spiroglycol.html">https://www.mgc.co.jp/products/nc/spiroglycol.html</a></li>
+      <li>EP1598357B1 — Process for production of spiroglycol (MGC), Google Patents; US counterpart US2005/0261506 (Justia). <a href="https://patents.google.com/patent/EP1598357B1/en">https://patents.google.com/patent/EP1598357B1/en</a></li>
+      <li>US9067950B2 — Process for producing spiroglycol (MGC), Google Patents. <a href="https://patents.google.com/patent/US9067950">https://patents.google.com/patent/US9067950</a></li>
+      <li>EP3313848 / WO2016209140 — Process for production of a spiroglycol (Perstorp AB), EPO. <a href="https://data.epo.org/gpi/EP3313848A4">https://data.epo.org/gpi/EP3313848A4</a></li>
+      <li>Xu J.M., Liu F.S., Yu S.T. — One-pot synthesis of spiroglycol, Bull. Chem. Soc. Ethiop. 22(1) 2008, AJOL. <a href="https://ajol.info/index.php/bcse/article/view/61353">https://ajol.info/index.php/bcse/article/view/61353</a></li>
+      <li>US8816039 — Copolycarbonate with spiroglycol, USPTO. <a href="https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/8816039">https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/8816039</a></li>
+      <li>EP4245788 — Polyester resin with SPG (MGC), EPO. <a href="https://data.epo.org/publication-server/rest/v1.2/patents/EP4245788NWA1/document.html">https://data.epo.org/publication-server/rest/v1.2/patents/EP4245788NWA1/document.html</a></li>
+      <li>Mitsubishi Gas Chemical — ALTESTER transparent heat-resistant polyester, IPROS. <a href="https://pr.mono.ipros.com/en/mgc/product/detail/2000167910">https://pr.mono.ipros.com/en/mgc/product/detail/2000167910</a></li>
+      <li>US12031025 — Composition comprising polyester and polyolefin (ALTESTER grades &amp; Tg), USPTO. <a href="https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/12031025">https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/12031025</a></li>
+      <li>US10633391 — Dispiro diol and di(meth)acrylate (MGC), USPTO. <a href="https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/10633391">https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/10633391</a></li>
+      <li>US9388194 — Acrylic compound having tetraoxaspiro backbone (Perstorp AB), Justia. <a href="https://patents.justia.com/patent/9388194">https://patents.justia.com/patent/9388194</a></li>
+      <li>Hammer, Pugh, Soucek — UV-curable cycloaliphatic polyesters containing spiroacetal moieties, ACS Appl. Polym. Mater. 2022 (doi:10.1021/acsapm.1c01295), Wichita State SOAR. <a href="https://soar.wichita.edu/items/87be2043-a778-4049-ba15-1230cc66afe8">https://soar.wichita.edu/items/87be2043-a778-4049-ba15-1230cc66afe8</a></li>
+      <li>ChemicalBook — Antioxidant AO-80 (CAS 90498-90-1). <a href="https://www.chemicalbook.com/ProductChemicalPropertiesCB4854841_EN.htm">https://www.chemicalbook.com/ProductChemicalPropertiesCB4854841_EN.htm</a></li>
+      <li>The Good Scents Company — AO-80 / Sumilizer GA-80 regulatory listings. <a href="https://www.thegoodscentscompany.com/data/rw1642951.html">https://www.thegoodscentscompany.com/data/rw1642951.html</a></li>
+      <li>TCI — Product T3804 (AO-80 type antioxidant, MW 740.98). <a href="https://tcichemicals.com/IL/en/p/T3804">https://tcichemicals.com/IL/en/p/T3804</a></li>
+      <li>Transparency Market Research — Spiroglycol Market. <a href="https://www.transparencymarketresearch.com/spiroglycol-market.html">https://www.transparencymarketresearch.com/spiroglycol-market.html</a></li>
+      <li>Dataintelo — Global Spiroglycol Market 2025–2034. <a href="https://dataintelo.com/report/global-spiroglycol-market">https://dataintelo.com/report/global-spiroglycol-market</a></li>
+      <li>pmarketresearch — Worldwide Spiroglycol Market 2026. <a href="https://pmarketresearch.com/?p=2630234">https://pmarketresearch.com/?p=2630234</a></li>
+      <li>Market Research Intellect — Spiroglycol Market (also Copolyester Market: marketresearchintellect.com/product/copolyester-market/). <a href="https://www.marketresearchintellect.com/product/spiroglycol-market/">https://www.marketresearchintellect.com/product/spiroglycol-market/</a></li>
+      <li>MarkWide Research — Spiroglycol Market 2026–2036. <a href="https://markwideresearch.com/spiroglycol-market">https://markwideresearch.com/spiroglycol-market</a></li>
+      <li>WiseGuy Reports — Spiroglycol Market (rejected estimate). <a href="https://www.wiseguyreports.com/reports/spiroglycol-market">https://www.wiseguyreports.com/reports/spiroglycol-market</a></li>
+      <li>Reportprime — Copolyesters Market. <a href="https://www.reportprime.com/copolyesters-r204">https://www.reportprime.com/copolyesters-r204</a></li>
+      <li>Reportprime — PETG Market. <a href="https://www.reportprime.com/polyethylene-terephthalate-glycol-petg-r525.md">https://www.reportprime.com/polyethylene-terephthalate-glycol-petg-r525.md</a></li>
+      <li>QYResearch via GII — Antioxidant for Polymer Materials 2025–2031. <a href="https://www.giikorea.co.kr/report/qyr1862122-antioxidant-polymer-materials-global-market-share.html">https://www.giikorea.co.kr/report/qyr1862122-antioxidant-polymer-materials-global-market-share.html</a></li>
+      <li>IMARC Group — Global Plastic Antioxidants Market. <a href="https://imarcgroup.com/global-plastic-antioxidants-market">https://imarcgroup.com/global-plastic-antioxidants-market</a></li>
+      <li>Research and Markets — UV Curable Resin Global Market Insights 2025. <a href="https://www.researchandmarkets.com/reports/5731274/uv-curable-resin-global-market-insights">https://www.researchandmarkets.com/reports/5731274/uv-curable-resin-global-market-insights</a></li>
+      <li>IMARC (via DRI Japan) — UV Curable Resins Market 2026–2034. <a href="https://www.dri.co.jp/auto/report/imarc/260601-uv-curable-resins-market-report-by-resin.html">https://www.dri.co.jp/auto/report/imarc/260601-uv-curable-resins-market-report-by-resin.html</a></li>
+      <li>Treayo — India HS 29329990 tariff (DGFT ITC-HS 2025-26 basis) &amp; global benchmarks. <a href="https://treayo.com/en/hs/india/29329990">https://treayo.com/en/hs/india/29329990</a></li>
+      <li>IIFL — Kanoria Chemicals &amp; Industries company summary. <a href="https://www.indiainfoline.com/company/kanoria-chemicals-industries-ltd-share-price-management/summary/743">https://www.indiainfoline.com/company/kanoria-chemicals-industries-ltd-share-price-management/summary/743</a></li>
+      <li>Asian Paints Penta Division — About us. <a href="https://penta.asianpaints.com/penta/About_us.aspx">https://penta.asianpaints.com/penta/About_us.aspx</a></li>
+      <li>CII GBC Energy Awards 2023 — Asian Paints Cuddalore (PE 8,760 MT). <a href="https://energy.greenbusinesscentre.com/energyawards/enepresent23/general/Asian%20Paints%20Limited,Cuddalore.pdf">https://energy.greenbusinesscentre.com/energyawards/enepresent23/general/Asian%20Paints%20Limited,Cuddalore.pdf</a></li>
+      <li>Polymers Paint Colour Journal — Perstorp Penta plant, Sayakha, Gujarat. <a href="https://polymerspaintcolourjournal.com/?p=18199">https://polymerspaintcolourjournal.com/?p=18199</a></li>
+      <li>Statista (DCP India) — India pentaerythritol production FY2013–2023. <a href="https://statista.com/statistics/727857/india-pentaerythritol-anhydride-production-volume">https://statista.com/statistics/727857/india-pentaerythritol-anhydride-production-volume</a></li>
+      <li>Expert Market Research — Isobutyraldehyde price trends 2026. <a href="https://www.expertmarketresearch.com/price-forecast/isobutyraldehyde-price-trends">https://www.expertmarketresearch.com/price-forecast/isobutyraldehyde-price-trends</a></li>
+      <li>S&amp;P Global — CEH Neopentyl Polyhydric Alcohols abstract (2025). <a href="https://www.spglobal.com/content/dam/spglobal/ci/en/documents/products/pdf/CI_0325_Global_CEH_Neopentyl_Polyhydric_Alcohols_Abstract.pdf">https://www.spglobal.com/content/dam/spglobal/ci/en/documents/products/pdf/CI_0325_Global_CEH_Neopentyl_Polyhydric_Alcohols_Abstract.pdf</a></li>
+      <li>SunSirs — Domestic NPG price, June 2022. <a href="https://www.sunsirs.com/uk/detail_news-7821.html">https://www.sunsirs.com/uk/detail_news-7821.html</a></li>
+      <li>ChemXplore — MGC to end polycarbonate production at Kashima. <a href="https://chemxplore.com/news/polycarbonate-production-discontinued-kashima-plant">https://chemxplore.com/news/polycarbonate-production-discontinued-kashima-plant</a></li>
+      <li>Mitsubishi Gas Chemical — FY2025 financial results presentation (JPX, 13 May 2026). <a href="https://www2.jpx.co.jp/disc/41820/140120260512526003.pdf">https://www2.jpx.co.jp/disc/41820/140120260512526003.pdf</a></li>
+      <li>Quartr — MGC investor presentation summary (3 Jul 2026). <a href="https://quartr.com/events/mitsubishi-gas-chemical-company-inc-4182-investor-presentation_FRFdhhGK">https://quartr.com/events/mitsubishi-gas-chemical-company-inc-4182-investor-presentation_FRFdhhGK</a></li>
+      <li>KPMG — US removes additional tariffs on India; interim framework (Feb 2026). <a href="https://kpmg.com/us/en/taxnewsflash/news/2026/02/united-states-removes-tariffs-imports-india.html">https://kpmg.com/us/en/taxnewsflash/news/2026/02/united-states-removes-tariffs-imports-india.html</a></li>
+      <li>DT Next — US tariffs on Indian goods: a chronology. <a href="https://www.dtnext.in/news/business/us-tariffs-on-indian-goods-a-chronology-2">https://www.dtnext.in/news/business/us-tariffs-on-indian-goods-a-chronology-2</a></li>
+      <li>EY — US Executive Order implementing US–Japan Agreement (Sep 2025). <a href="https://globaltaxnews.ey.com/news/2025-1803">https://globaltaxnews.ey.com/news/2025-1803</a></li>
+      <li>Packaging South Asia — Ester Industries Q2 FY26. <a href="https://packagingsouthasia.com/type-of-article/industry-news/ester-industries-q2/">https://packagingsouthasia.com/type-of-article/industry-news/ester-industries-q2/</a></li>
+      <li>Packaging South Asia — Ester Industries Q1 FY27. <a href="https://packagingsouthasia.com/?p=116629">https://packagingsouthasia.com/?p=116629</a></li>
+      <li>Ester Industries — Q3/9M FY25 press release (NSE). <a href="https://nsearchives.nseindia.com/corporate/ESTER_06022025143820_SignedStxpressrelease.pdf">https://nsearchives.nseindia.com/corporate/ESTER_06022025143820_SignedStxpressrelease.pdf</a></li>
+      <li>ChemLinked — India REACH: Chemicals (Management &amp; Safety) Rules. <a href="https://chemical.chemlinked.com/chempedia/india-reach-chemicals-management-safety-rules-20xx">https://chemical.chemlinked.com/chempedia/india-reach-chemicals-management-safety-rules-20xx</a></li>
+      <li>ChemSafetyPro — Indian Draft Chemicals (Management and Safety) Rules. <a href="https://www.chemsafetypro.com/Topics/India/Indian_Chemicals_Management_Safety_Rules_India_REACH.html">https://www.chemsafetypro.com/Topics/India/Indian_Chemicals_Management_Safety_Rules_India_REACH.html</a></li>
+      <li>TaxGuru — India–Japan CEPA highlights. <a href="https://taxguru.in/?p=37186">https://taxguru.in/?p=37186</a></li>
+      <li>Japan Customs — Tariff elimination under Japan–India EPA. <a href="https://www.Customs.go.jp/english/c-answer_e/pdf/FAX4035e.pdf">https://www.Customs.go.jp/english/c-answer_e/pdf/FAX4035e.pdf</a></li>
+      <li>ChemicalBook — Price list for CAS 1455-42-1 (AA Blocks, AK Scientific, Alfa Aesar, Ambeed…). <a href="https://m.chemicalbook.com/price/1455-42-1.htm">https://m.chemicalbook.com/price/1455-42-1.htm</a></li>
+      <li>VWR / Avantor — TCI B1158 (EINECS 485-230-3). <a href="https://b2b-nl.vwr.com/store/product/30001989/3-9-bis-1-1-dimethyl-2-hydroxyethyl-2-4-8-10-tetraoxaspiro-5-5-undecane-98-0-gc_assay_method">https://b2b-nl.vwr.com/store/product/30001989/3-9-bis-1-1-dimethyl-2-hydroxyethyl-2-4-8-10-tetraoxaspiro-5-5-undecane-98-0-gc_assay_method</a></li>
+      <li>OFX — USD to INR exchange rate (Aug 2026). <a href="https://www.ofx.com/en-us/exchange-rates/inr/">https://www.ofx.com/en-us/exchange-rates/inr/</a></li>
+      <li>US EPA — TSCA Chemical Substance Inventory. <a href="https://www.epa.gov/tsca-inventory">https://www.epa.gov/tsca-inventory</a></li>
+      <li>US11578168 — Polycarbonate resin and optical member (imaging lens birefringence), USPTO. <a href="https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/11578168">https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/11578168</a></li>
+      <li>Clearsynth — Sumilizer AG 80 reference standard (India). <a href="https://clearsynth.com/product/Sumilizer-AG-80">https://clearsynth.com/product/Sumilizer-AG-80</a></li>
+      <li>Polymers Paint Colour Journal — Perstorp NPG plant, Zibo, China. <a href="https://www.polymerspaintcolourjournal.com/perstorp-underlines-commitment-to-china/">https://www.polymerspaintcolourjournal.com/perstorp-underlines-commitment-to-china/</a></li>
+      <li>JP6996489B2 — Polyester resin (MGC), Google Patents. <a href="https://patents.google.com/patent/JP6996489B2/en">https://patents.google.com/patent/JP6996489B2/en</a></li>
+      <li>EP1164155 — Polyester resin with 5–60 mol% spiroglycol (MGC), EPO. <a href="https://data.epo.org/publication-server/rest/v1.2/publication-dates/20011219/patents/EP1164155NWA1/document.html">https://data.epo.org/publication-server/rest/v1.2/publication-dates/20011219/patents/EP1164155NWA1/document.html</a></li>
+      <li>US11149249 — Cell-culture base material using SPG-modified PET (ALTESTER S4500). <a href="https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/11149249">https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/11149249</a></li>
+      <li>Packaging South Asia — Ester Industries Q4 FY26 results. <a href="https://packagingsouthasia.com/?p=114410">https://packagingsouthasia.com/?p=114410</a></li>
+      <li>ChemRadar — US EPA updated 2025 TSCA Inventory (CDR thresholds). <a href="https://www.chemradar.com/service/detail/ecsu9bnz8ykg">https://www.chemradar.com/service/detail/ecsu9bnz8ykg</a></li>
+      <li>National Green Tribunal — EIA Notification 2006, item 5(f) synthetic organic chemicals. <a href="https://www.greentribunal.gov.in/sites/default/files/news_updates/8820.pdf">https://www.greentribunal.gov.in/sites/default/files/news_updates/8820.pdf</a></li>
+      <li>Puducherry SEIAA — Office memorandum on item 5(f) applicability &amp; CPCB Red category. <a href="https://dste.py.gov.in/SEIAA/pdf/OM/C76.pdf">https://dste.py.gov.in/SEIAA/pdf/OM/C76.pdf</a></li>
+      <li>Galaxy Surfactants — EC compliance report (Category B, 5(f), notified estate). <a href="https://www.galaxysurfactants.com/pdf/sustainability/environment-compliance/environment-clearance/2022/GSL-Jhagadia-EC-compliance-report.pdf">https://www.galaxysurfactants.com/pdf/sustainability/environment-compliance/environment-clearance/2022/GSL-Jhagadia-EC-compliance-report.pdf</a></li>
+    </ol>
+  </div>
+</section>
+
+</div><!-- /content -->
+
+<footer>
+  <div><b>CONFIDENTIAL — Internal Use Only.</b> Prepared by: Market Intelligence · October 2026 · Report Type: Secondary Market Research — No Trade Data.</div>
+  <div style="margin-top:6px">Based on publicly available secondary sources accessed October 2026. Market sizes, bulk prices and India demand figures marked “estimate” are analyst triangulations and must be validated with RFQs and shipment data before commitment. Not investment or financial advice.</div>
+  <div style="margin-top:6px">PDF: click <b>⬇ Download PDF</b> in the sidebar → Chrome print dialog → Destination “Save as PDF” → More settings → tick “Background graphics”. Contents links remain clickable in the saved PDF.</div>
+</footer>
+
+</main>
+
+<script>
+(function(){
+  var links = Array.prototype.slice.call(document.querySelectorAll('.nav-link'));
+  var map = {};
+  links.forEach(function(l){ map[l.getAttribute('data-section')] = l; });
+  function setActive(id){
+    links.forEach(function(l){ l.classList.remove('active'); });
+    if(map[id]){ map[id].classList.add('active'); try{ map[id].scrollIntoView({block:'nearest'}); }catch(e){} }
+  }
+  if('IntersectionObserver' in window){
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ setActive(e.target.id); } });
+    }, {rootMargin:'-20% 0px -70% 0px', threshold:0});
+    document.querySelectorAll('section.report-section').forEach(function(s){ obs.observe(s); });
+  }
+  links.forEach(function(l){ l.addEventListener('click', function(){ setActive(l.getAttribute('data-section')); }); });
+  setActive('exec');
+})();
+</script>
+</body>
+</html>
